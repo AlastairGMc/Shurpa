@@ -1,6 +1,5 @@
-/*	workshop.js	*/
-
       function gotoPage(url){
+	alert(url);
       	window.location.href = url;
       }
 
