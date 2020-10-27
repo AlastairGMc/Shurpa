@@ -1,6 +1,7 @@
 /*	workshop.js	*/
 
       function gotoPage(lst) {
+	      alert(lst.value);
       	window.location.href = lst.value;
       }
 
