@@ -1,1 +1,146 @@
 /*  workshop.css  */
+
+	.main-inner {
+  		padding-top: 0;
+     }
+      
+	ul {
+          list-style-type: none;
+          margin-block-start: 2px;
+          margin-block-end: 0;
+          margin-inline-start: 20px;
+          margin-inline-end: 0px;
+          padding-inline-start: 0px;        
+		}
+
+	button {
+	  background-color: white;
+	  border: none;
+      cursor: pointer;
+      border: none;
+      outline: none;
+	}
+
+  /*	@media only screen and (orientation: landscape) and (<data:blog.isMobileRequest/>){	*/
+  @media only screen and (orientation: landscape) {
+
+      body {
+		background: $(body.background);
+		padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread);
+      }
+ 
+      .titlewrapper {
+        padding: 0px $(header.padding);
+      }
+      
+      .Header .description {
+      	font: normal bold 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      }
+      
+      .background-pages {
+      	font: normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      }
+      
+      .aboutPages {
+      	font-size: 18px;
+      }
+     
+      
+      .content-outer, .content-fauxcolumn-outer, .region-inner {
+        min-width: $(content.width);
+        max-width: $(content.width);
+        _width: $(content.width);
+      }
+         
+      .main-inner .columns {
+        padding-right: 260px;
+      }
+
+      .main-inner .fauxcolumn-center-outer {
+        right: 260px;
+      }
+
+      .main-inner .fauxcolumn-right-outer {
+        width: 260px;
+      }
+      
+      .column-right-outer {
+      	display: block;
+      }
+
+      .post-body {
+        font-size: 110%;
+        line-height: 1.4;
+      }
+      
+      .widget-content-HTML1 {
+      	display: none;
+      }
+      
+      .widget-content-HTML2 {
+      	display: none;
+      }
+    }
+           
+	@media only screen and (orientation: portrait){
+      
+      body {
+          background: none;
+          padding: 0px;
+      }
+
+      .titlewrapper {
+        padding: 0px $(header.padding);
+      }
+
+      .Header h1 {
+        font: normal normal 80px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      }
+      
+      .Header .description {
+      	font: normal bold 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      }
+
+      .background-pages {
+      	font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      }
+      
+      .aboutPages {
+      	font-size: 100%;
+      }
+      
+      .content-outer {
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+      }
+         
+      .main-inner .columns {
+        padding-right: 0px;
+      }
+
+      .main-inner .fauxcolumn-center-outer {
+        right: 0px;
+      }
+
+      .main-inner .fauxcolumn-right-outer {
+        width: 0px;
+      }
+      
+      .column-right-outer {
+      	display: none;
+      }
+      
+      .post-body {
+        font-size: 250%;
+        line-height: 1.4;
+      }
+
+      .widget-content-HTML1 {
+      	display: block;
+      }
+      
+      .widget-content-HTML2 {
+      	display: block;
+      }
+	}
