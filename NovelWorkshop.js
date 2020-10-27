@@ -162,12 +162,13 @@
 				number:number, 
 				title:title, 
 				descrip:descrip,
-              	body:body,
+              			body:body,
 				url:url, 
 				published:published, 
 				updated:updated
 			}
-        }
+        	}
+		alert('records: ' + i);
 	}
 
 
