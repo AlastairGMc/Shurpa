@@ -32,6 +32,27 @@ chapters.push({id:6, sort:6, link:'The End', title:'Saturday', descrip:'Chapter 
 chapters.push({id:7, sort:7, link:'The End', title:'Sunday', descrip:'Chapter plan: Resolution. Lyre and Eager go their own ways, sadder but wiser.'});
 chapters.sort(function(a, b) {return a.sort - b.sort;});
 
+function getScene(id)
+{
+	var scn;
+	for (var j = 0; j < scenes.length; j++)
+	{
+		if(id == scenes[j].id)
+		{
+			scn = scenes[j];
+			break;
+		}
+	}
+	return scn;
+}
+
+
+function getTitle(id)
+{
+	var scn = getScene(id);
+	return scn.link + '; Scene' + scn.number + ': ' + scn.title;
+}
+
 
 function getSceneDescrip(body)
 {
