@@ -1,19 +1,5 @@
 /* postData.js */
 
-const downArrow = '▼';
-const rightArrow = '▶';
-
-const upArrow = '&#9650; ';
-const plus = '&#65291;';
-const minus = '&#65293;';
-const downChevron = '&#8964;';
-const upChevron = '&#8963;';
-
-const upTriangle = '⏶';
-const downTriangle = '⏷';
-
-let titleBtnIcon = [rightArrow, downArrow];			// idx 0 means the container is hidden; idx 1 means the container is visible
-let descripBtnIcon = [downTriangle, upTriangle];
 let scenes = [];
 let chapters = [];
 let sections = [];
@@ -31,6 +17,7 @@ chapters.push({id:5, sort:5, link:'The Middle', title:'Friday', descrip:'Chapter
 chapters.push({id:6, sort:6, link:'The End', title:'Saturday', descrip:'Chapter plan: The last straw and breakup.'});
 chapters.push({id:7, sort:7, link:'The End', title:'Sunday', descrip:'Chapter plan: Resolution. Lyre and Eager go their own ways, sadder but wiser.'});
 chapters.sort(function(a, b) {return a.sort - b.sort;});
+
 
 function getScene(id)
 {
