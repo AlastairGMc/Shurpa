@@ -139,5 +139,5 @@ function getPostData(root)
 			updated:updated
 		}
 	}
-	//alert(i + ' posts');
+	alert(i + ' posts');
 }
