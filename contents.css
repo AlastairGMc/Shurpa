@@ -8,7 +8,6 @@
 }
 
 .SectionTitleBtn {
-	width: 20px;
 	background-color: white;
 	color: #3399bb;
 	padding-left: 0px;
@@ -53,7 +52,6 @@
 }
 
 .ChapterTitleBtn {
-	width: 20px;
 	background-color: white;
 	padding-left: 0px;
 	padding-bottom: 5px;
@@ -101,7 +99,6 @@
 }
 
 .SceneTitleBtn {
-	width: 20px;
 	background-color: white;
 	font-weight: normal;  
 	padding-left: 0px;
