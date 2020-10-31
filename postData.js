@@ -132,7 +132,7 @@ function getPostData(root)
 			number:number, 
 			title:title, 
 			descrip:descrip,
-			body:body.substring(0,100),
+			body:body.substring(0,200),
 			url:url, 
 			published:published, 
 			updated:updated
