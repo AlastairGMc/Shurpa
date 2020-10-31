@@ -20,14 +20,18 @@ function gotoPage(url){
 }
 
 
-function btnVClick(btn, bAction)	// software button click
+function btnVClick(btn, bVisible)	// software button click
 {	
+	var container = document.getElementById(btn.getAttribute('ContainerId'));
+	container.style.display = (bVisible ? 'none' : 'block');
+/*
 	var icons = eval(btn.getAttribute('icon'));
 	var container = document.getElementById(btn.getAttribute('ContainerId'));
 
-    container.style.display = (bAction ? 'block' : 'none');
+    	container.style.display = (bAction ? 'block' : 'none');
 	btn.innerHTML = icons[+bAction];
 	btn.setAttribute('iconIdx', +bAction);	// store the new state
+*/
 }
 
 
