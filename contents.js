@@ -226,9 +226,13 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 	titleBtn = document.createElement('BUTTON');
 	titleBtn.id = typename + 'TitleBtn' + id;
 	titleBtn.className = typename + 'TitleBtn';
+	titleBtn.innerHTML = displayname + ' ' + number + ': ' + title;
+
+	/*
 	titleBtn.innerHTML = titleBtnIcon[1];	// downArrow
 	titleBtn.setAttribute('icon', 'titleBtnIcon');
 	titleBtn.setAttribute('iconIdx', '1');
+	*/
 	titleBtn.setAttribute('ContainerId', divContainer.id)
 	titleBtn.setAttribute('descripBtnId', typename + 'DescripBtn' + id);
 	titleBtn.addEventListener('click', btnClick);          
@@ -241,11 +245,12 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		lstBtn.innerHTML = typename + ' ' + number + ': ' + title;
 	}
 
+	/*
 	var titleSpan = document.createElement('SPAN');
 	titleSpan.className = typename + 'TitleSpan';
 	titleSpan.innerHTML = displayname + ' ' + number + ': ' + title;
 	divTitle.appendChild(titleSpan);
-
+	*/
 
 	if (descrip)
 	{
