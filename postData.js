@@ -155,5 +155,5 @@ function getPostData(root)
 			comments: comments
 		}
 	}
-	alert(scenes[0].comments);
+	//alert(scenes[0].comments);
 }
