@@ -15,6 +15,11 @@ let titleBtnIcon = [rightArrow, downArrow];			// idx 0 means the container is hi
 let descripBtnIcon = [downTriangle, upTriangle];
 
 
+function gotoPage(url){
+	window.location.href = url;
+}
+
+
 function btnVClick(btn, bAction)	// software button click
 {	
 	var icons = eval(btn.getAttribute('icon'));
@@ -150,7 +155,7 @@ function formatContents(divName)
 			sectionLI.appendChild(sectionBtn);
 
 			var sec = sections[k];
-			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', sec.id, k+1, sec.title, sec.descrip, null, null, null);
+			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', sec.id, k+1, sec.title, sec.descrip, null, null, null, null);
 
 			var chapterUL = document.createElement("UL");
 			chapterUL.className = 'ChapterUL';
@@ -167,7 +172,7 @@ function formatContents(divName)
 				chapterLI.appendChild(chapterBtn);
 
 				var c = chapterList[i];
-				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', c.id, chaptNumber++, c.title, c.descrip, null, null, null);
+				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', c.id, chaptNumber++, c.title, c.descrip, null, null, null, null);
 
 				var sceneUL = document.createElement("UL");
 				sceneUL.className = 'SceneUL';
@@ -184,7 +189,7 @@ function formatContents(divName)
 					sceneLI.appendChild(sceneBtn);
 
 					var s = sceneList[j];
-					createDivs(chapterParent, sceneBtn, 'Scene', 'Scene', s.id, s.number, s.title, s.descrip, s.body, s.updated, s.url);
+					createDivs(chapterParent, sceneBtn, 'Scene', 'Scene', s.id, s.number, s.title, s.descrip, s.body, s.updated, s.url, s.comments);
 				}
 			}
 		}
@@ -194,7 +199,7 @@ function formatContents(divName)
 }
 
 
-function createDivs(parent, lstBtn, typename, displayname, id, number, title, descrip, body, updated, url)
+function createDivs(parent, lstBtn, typename, displayname, id, number, title, descrip, body, updated, url, comments)
 { 
 	var divTitle = document.createElement('DIV');
 	divTitle.id = typename + 'Title' + id;
@@ -264,7 +269,7 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		upd.innerHTML = updated;
 		divTitle.appendChild(upd);
 	}
-
+/*
 	if (url)
 	{
 		var commentLinkTop = document.createElement('A');
@@ -280,6 +285,15 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		commentLinkBottom.href = url;
 		commentLinkBottom.innerHTML = 'Comments';
 		divContainer.appendChild(commentLinkBottom);
+	}
+*/
+	if (comments)
+	{
+		var commentLbl = document.createElement('SPAN');
+		commentLbl.ID = typename + 'NumComments' + id;
+		commentLbl.className = typename + 'NumComments';
+		commentLbl.innerHTML = comments;
+		divTitle.appendChild(commentLbl);
 	}
 
 	return divContainer;
