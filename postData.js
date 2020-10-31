@@ -101,6 +101,21 @@ function getPostURL(entry)
 	return url;
 }
 
+function getNumComments(entry)
+{
+	var numComments;
+
+	for (var i = 0; i < entry.link.length; i++)
+	{
+		if (entry.link[i].rel == 'replies' && entry.link[i].type == 'text/html')
+		{
+			numComments = entry.link[i].title;
+			break;
+		}
+	}
+	return numComments;
+}
+
 
 function getID(tag)
 {
@@ -125,6 +140,7 @@ function getPostData(root)
 		var updated = getFormattedDate(root.feed.entry[i].updated.$t);
 		var body = root.feed.entry[i].content.$t;
 		var descrip = getSceneDescrip(body);
+		var comments = getNumComments(root.feed.entry[i]);
 
 		scenes[i] = {
 			id:id, 
@@ -135,8 +151,9 @@ function getPostData(root)
 			body:body.substring(0,200),
 			url:url, 
 			published:published, 
-			updated:updated
+			updated:updated,
+			comments: comments
 		}
 	}
-	alert(scenes[0].body);
+	alert(scenes[0].comments);
 }
