@@ -263,7 +263,7 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		descripBtn.setAttribute('ContainerId', divDescrip.id);
 		descripBtn.addEventListener('click', btnClick);          
 		//divTitle.appendChild(descripBtn);
-		titleSpan.appendChild(descripBtn);
+		//titleSpan.appendChild(descripBtn);
 	}
 
 	if (updated)
