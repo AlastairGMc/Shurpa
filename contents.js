@@ -22,38 +22,46 @@ function gotoPage(url){
 
 function btnVClick(btn, bVisible)	// software button click
 {	
-	var container = document.getElementById(btn.getAttribute('ContainerId'));
-	container.style.display = (bVisible ? 'none' : 'block');
-/*
 	var icons = eval(btn.getAttribute('icon'));
-	var container = document.getElementById(btn.getAttribute('ContainerId'));
 
-    	container.style.display = (bAction ? 'block' : 'none');
-	btn.innerHTML = icons[+bAction];
-	btn.setAttribute('iconIdx', +bAction);	// store the new state
-*/
+	if (icons)
+	{
+		var container = document.getElementById(btn.getAttribute('ContainerId'));
+		container.style.display = (bVisible ? 'block' : 'none');
+		btn.innerHTML = icons[+bVisible];
+		btn.setAttribute('iconIdx', +bVisible);	// store the new state
+	}
+	else
+	{
+		var container = document.getElementById(btn.getAttribute('ContainerId'));
+		container.style.display = (bVisible ? 'none' : 'block');
+	}
 }
 
 
 function btnClick()		// user button click
 {	
-	var container = document.getElementById(this.getAttribute('ContainerId'));
-	var bVisible = (container.style.display == 'none' ? false : true);
-	container.style.display = (bVisible ? 'none' : 'block');
-
-/*
 	var icons = eval(this.getAttribute('icon'));
-	var iconIdx = eval(this.getAttribute('iconIdx'));
-	var container = document.getElementById(this.getAttribute('ContainerId'));
-	var bAction = (!(!!iconIdx));	// convert int to boolean, then flip
-			
-    	container.style.display = (bAction ? 'block' : 'none');
-	this.innerHTML = icons[+bAction];
 
-	this.setAttribute('iconIdx', +bAction); 	// store the new state
-	clearExpandCollapseBtns();
-*/
+	if (icons)
+	{
+		var iconIdx = eval(this.getAttribute('iconIdx'));
+		var container = document.getElementById(this.getAttribute('ContainerId'));
+		var bVisible = (!(!!iconIdx));	// convert int to boolean, then flip
+			
+    		container.style.display = (bVisible ? 'block' : 'none');
+		this.innerHTML = icons[+bVisible];
+		this.setAttribute('iconIdx', +bVisible); 	// store the new state
+		//clearExpandCollapseBtns();
+	}
+	else
+	{
+		var container = document.getElementById(this.getAttribute('ContainerId'));
+		var bVisible = (container.style.display == 'none' ? false : true);
+		container.style.display = (bVisible ? 'none' : 'block');
+	}
 }
+
 
 
 function clearExpandCollapseBtns()
