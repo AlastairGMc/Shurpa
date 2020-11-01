@@ -255,12 +255,12 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		lstBtn.innerHTML = typename + ' ' + number + ': ' + title;
 	}
 
-	/*
+	
 	var titleSpan = document.createElement('SPAN');
 	titleSpan.className = typename + 'TitleSpan';
-	titleSpan.innerHTML = displayname + ' ' + number + ': ' + title;
+	//titleSpan.innerHTML = displayname + ' ' + number + ': ' + title;
 	divTitle.appendChild(titleSpan);
-	*/
+	
 
 	if (descrip)
 	{
@@ -272,8 +272,8 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		descripBtn.setAttribute('icon', 'descripBtnIcon');
 		descripBtn.setAttribute('ContainerId', divDescrip.id);
 		descripBtn.addEventListener('click', btnClick);          
-		//divTitle.appendChild(descripBtn);
-		//titleSpan.appendChild(descripBtn);
+		divTitle.appendChild(descripBtn);
+		titleSpan.appendChild(descripBtn);
 	}
 
 	if (updated)
