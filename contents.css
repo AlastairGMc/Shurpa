@@ -96,6 +96,8 @@
 	border-color:grey;
 	border-top-style: solid; 
 	border-top-width: thin;
+	white-space: nowrap;
+	display: inline-block;
 }
 
 .SceneTitleBtn {
