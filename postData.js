@@ -175,6 +175,6 @@ function getPostData(root)
 			comments: comments
 		}
 	}
-	//alert(scenes[0].body);
+	alert(scenes[1].preview);
 }
 
