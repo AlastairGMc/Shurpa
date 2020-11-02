@@ -139,7 +139,7 @@ function getPreview(body)
 	{
 		startIdx = 1 + body.indexOf(startDelim, 0);
 		endIdx = body.indexOf(endDelim, startIdx +1);
-		post = body.substring(endIdxm +1).trim();
+		post = body.substring(endIdx +1).trim();
 		preview = preview.substring(0, 200) + ' ... ';
 	}
 	return preview;
