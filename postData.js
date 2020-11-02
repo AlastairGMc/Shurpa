@@ -130,7 +130,7 @@ function getID(tag)
 function getPreview(entry)
 {
 	var body = entry.content.$t;
-	return body.substring(0, 200) + ' ... ';
+	return body;	//.substring(0, 200) + ' ... ';
 }
 
 function getPostData(root)
