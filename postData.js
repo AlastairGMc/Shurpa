@@ -129,8 +129,20 @@ function getID(tag)
 
 function getPreview(body)
 {
-	return body.substring(0, 200) + ' ... ';
+	var className = 'NotesClass';
+	var startDelim = '>';
+	var endDelim = '<';
+	var preview = '';
+
+	if (body.includes(className))
+	{
+		startIdx = 1 + body.indexOf(startDelim, 0);
+		endIdx = body.indexOf(endDelim, startIdx +1);
+		preview = body.substring(endIdx, 200) + ' ... ';
+	}
+	return preview;
 }
+
 
 function getPostData(root)
 {
