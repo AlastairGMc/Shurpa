@@ -127,6 +127,12 @@ function getID(tag)
 }
 
 
+function getPreview(entry)
+{
+	var body = entry.content.$t;
+	return body.substring(0, 200) + ' ... ';
+}
+
 function getPostData(root)
 {
 	for (var i = 0; i < root.feed.entry.length; i++)
@@ -138,7 +144,7 @@ function getPostData(root)
 		var url = getPostURL(root.feed.entry[i]);
 		var published = root.feed.entry[i].published.$t;
 		var updated = getFormattedDate(root.feed.entry[i].updated.$t);
-		var body = root.feed.entry[i].content.$t;
+		var preview = getPreview(root.feed.entry[i]);
 		var descrip = getSceneDescrip(body);
 		var comments = getNumComments(root.feed.entry[i]);
 
@@ -148,7 +154,7 @@ function getPostData(root)
 			number:number, 
 			title:title, 
 			descrip:descrip,
-			body:body.substring(0,200),
+			body:preview,
 			url:url, 
 			published:published, 
 			updated:updated,
@@ -157,3 +163,4 @@ function getPostData(root)
 	}
 	//alert(scenes[0].comments);
 }
+
