@@ -42,7 +42,7 @@ function btnVClick(btn, bVisible)	// software button click
 function btnClick()		// user button click
 {	
 	var icons = eval(this.getAttribute('icon'));
-	alert(icons);
+	
 	if (icons)
 	{
 		var iconIdx = eval(this.getAttribute('iconIdx'));
