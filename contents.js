@@ -216,6 +216,9 @@ function formatContents(divName)
 	return bReturn;
 }
 
+function getDescrip(ref){
+	
+}
 
 function createDivs(parent, lstBtn, typename, displayname, id, number, title, descrip, body, updated, url, comments)
 { 
@@ -229,7 +232,8 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		var divDescrip = document.createElement('DIV');
 		divDescrip.id = typename + 'Descrip' + id;
 		divDescrip.className = typename + 'Descrip';
-		divDescrip.innerHTML = descrip;
+		//divDescrip.innerHTML = descrip;
+		divDescrip.innerHTML = getDescrip(title);
 		parent.appendChild(divDescrip);
 	}
 
