@@ -1,7 +1,9 @@
 /* summary.json */
 
-[
-  {"title": "The Beginning", "descrip": "<b>The year: </b>2050<br /><br /><b>The place: </b>Vancouver"},
-  {"title": "The Middle", "descrip": "<b>Section plan: </b>Subplots are advanced incrementally"},
-  {"title": "The End", "descrip": "<b>Section plan: </b>Accommodations have been made as much as possible"}
-]
+{
+  "summary": [
+    {"title": "The Beginning", "descrip": "<b>The year: </b>2050<br /><br /><b>The place: </b>Vancouver"},
+    {"title": "The Middle", "descrip": "<b>Section plan: </b>Subplots are advanced incrementally"},
+    {"title": "The End", "descrip": "<b>Section plan: </b>Accommodations have been made as much as possible"}
+  ]
+}
