@@ -1,5 +1,13 @@
 [
     {"title": "The Beginning", "descrip": "<b>The year: </b>"},
     {"title": "The Middle", "descrip": "<b>Section plan: </b>"},
-    {"title": "The End", "descrip": "<b>Section plan: </b>Accommodations"}
+    {"title": "The End", "descrip": "<b>Section plan: </b>Accommodations"},
+    {"title": "Monday", "descrip": "<b>Chapter plan: </b>Lyre and Eager meet and experience intense attraction. This triggers warnings from their respective shurpas. The shurpas don't try to contradict their owners, but they assess the dangers and take up negotiating positions to mediate.<br /><br />Meanwhile, subplots are launched: <br />a) Fear & loathing at the office <br />b) Walf & Sarba tragic romance <br />c) Pool's travails with shurpas <br />d) Zero's new shurpa hack."},
+    {"title": "Tuesday", "descrip": "<b>Chapter plan: </b>Lyre and Eager engineer a meeting. Consumation."},
+    {"title": "Wednesday", "descrip": "<b>Chapter plan: </b>Bliss, when differences and potential conflicts seem small."},
+    {"title": "Thursday", "descrip": "<b>Chapter plan: </b>More intense negotiations when the differences in understanding seem irreconcilable."},
+    {"title": "Friday", "descrip": "<b>Chapter plan: </b>Crisis of decision when Mother is closing in."},
+    {"title": "Saturday", "descrip": "<b>Chapter plan: </b>The last straw and breakup."},
+    {"title": "Sunday", "descrip": "<b>Chapter plan: </b>Resolution. Lyre and Eager go their own ways, sadder but wiser."}
+    
 ]
