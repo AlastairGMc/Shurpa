@@ -157,11 +157,11 @@ function filterBy(objArray, title)
 }
 
 
-function formatContents(divName)
+function formatContents(widgetDivName, objSummary)
 {	
 	var bReturn = false;
 	var chaptNumber = 1;
-	var widget = document.getElementById(divName);
+	var widget = document.getElementById(widgetDivName);
 
 	if(typeof(widget) != 'undefined' && widget != null)
 	{
@@ -173,7 +173,8 @@ function formatContents(divName)
 			sectionLI.appendChild(sectionBtn);
 
 			var sec = sections[k];
-			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', sec.id, k+1, sec.title, sec.descrip, null, null, null, null);
+			var secDescrip = getDescrip(sec.title, objSummary)
+			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', sec.id, k+1, sec.title, secDescrip, null, null, null, null);
 
 			var chapterUL = document.createElement("UL");
 			chapterUL.className = 'ChapterUL';
@@ -190,7 +191,8 @@ function formatContents(divName)
 				chapterLI.appendChild(chapterBtn);
 
 				var c = chapterList[i];
-				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', c.id, chaptNumber++, c.title, c.descrip, null, null, null, null);
+				var chDescrip = getDescrip(c.title, objSummary)
+				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', c.id, chaptNumber++, c.title, chDescrip, null, null, null, null);
 
 				var sceneUL = document.createElement("UL");
 				sceneUL.className = 'SceneUL';
@@ -211,13 +213,21 @@ function formatContents(divName)
 				}
 			}
 		}
-        bReturn = true;
+        	bReturn = true;
 	}
 	return bReturn;
 }
 
-function getDescrip(ref){
-	
+function getDescrip(title, objSummary){
+	var returnDescrip = '';
+
+	for (var i=0; i < objSummary.length; i++){
+		if (title == objSummary[i].title){
+			returnDescrip = objSummary[i].descrip;
+			break;
+		}
+	}
+	return returnDescrip;
 }
 
 function createDivs(parent, lstBtn, typename, displayname, id, number, title, descrip, body, updated, url, comments)
