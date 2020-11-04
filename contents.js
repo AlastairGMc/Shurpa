@@ -220,10 +220,11 @@ function formatContents(widgetDivName, objSummary)
 
 function getDescrip(title, objSummary){
 	var returnDescrip = '';
+	const s = objSummary['summary'];
 
-	for (var i=0; i < objSummary.length; i++){
-		if (title == objSummary[i].title){
-			returnDescrip = objSummary[i].descrip;
+	for (var i=0; i < s.length; i++){
+		if (title == s[i].title){
+			returnDescrip = s[i].descrip;
 			break;
 		}
 	}
