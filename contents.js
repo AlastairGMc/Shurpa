@@ -223,7 +223,7 @@ function getDescrip(title, objSummary){
 
 	for (var i=0; i < objSummary['summary'].length; i++){
 		if (title == objSummary['summary'][i].title){
-			returnDescrip = s[i].descrip;
+			returnDescrip = objSummary['summary'][i].descrip;
 			break;
 		}
 	}
