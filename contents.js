@@ -156,7 +156,85 @@ function filterBy(objArray, title)
 	return filteredLst;
 }
 
+function formatContents(widgetDivName)
+{	
+	var bReturn = false;
+	var chaptNumber = 1;
+	var widget = document.getElementById(widgetDivName);
 
+	if(typeof(widget) != 'undefined' && widget != null)
+	{
+		//for (var k = 0; k < sections.length; k++)
+		for (var k = 0; k < structure['section'].length; k++)
+		{
+			var sectionLI = document.createElement("LI");
+			var sectionBtn = document.createElement("BUTTON");   
+			sectionBtn.className = 'shortcutSectionBtn';
+			sectionLI.appendChild(sectionBtn);
+
+			var secTitle = structure['section'][k].title;
+			var secDescrip = getDescrip(secTitle)
+			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', sec.id, k+1, secTitle, secDescrip, null, null, null, null);
+
+			var chapterUL = document.createElement("UL");
+			chapterUL.className = 'ChapterUL';
+			sectionLI.appendChild(chapterUL);
+
+			//var chapterList = filterBy(chapters, sections[k].title);
+			//for (var i = 0; i < chapterList.length; i++)
+			for (var i = 0; i < structure['section'][k]['chapter'].length; i++)
+			{	
+				var chapterLI = document.createElement("LI");
+				chapterUL.appendChild(chapterLI);
+
+				var chapterBtn = document.createElement("BUTTON");   
+				chapterBtn.className = 'shortcutChapterBtn';
+				chapterLI.appendChild(chapterBtn);
+
+				//var c = chapterList[i];
+				var chTitle = structure['section'][k]['chapter'][i].title;
+				var chDescrip = getDescrip(chTitle)
+				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', c.id, chaptNumber++, chTitle, chDescrip, null, null, null, null);
+
+				var sceneUL = document.createElement("UL");
+				sceneUL.className = 'SceneUL';
+				chapterLI.appendChild(sceneUL);
+
+				//var sceneList = filterBy(scenes, chapterList[i].title);
+				var sceneList = filterBy(scenes, chTitle);
+				for (var j = 0; j < sceneList.length; j++)
+				{
+					var sceneLI = document.createElement("LI");
+					sceneUL.appendChild(sceneLI);
+
+					var sceneBtn = document.createElement("BUTTON");   
+					sceneBtn.className = 'shortcutSceneBtn';
+					sceneLI.appendChild(sceneBtn);
+
+					var s = sceneList[j];
+					createDivs(chapterParent, sceneBtn, 'Scene', 'Scene', s.id, s.number, s.title, s.descrip, s.body, s.updated, s.url, s.comments);
+				}
+			}
+		}
+        	bReturn = true;
+	}
+	return bReturn;
+}
+
+function getDescrip(title){
+	var returnDescrip = '';
+
+	for (var i=0; i < summary['summary'].length; i++){
+		if (title == summary['summary'][i].title){
+			returnDescrip = summary['summary'][i].descrip;
+			break;
+		}
+	}
+	return returnDescrip;
+}
+
+
+/*
 function formatContents(widgetDivName, objSummary)
 {	
 	var bReturn = false;
@@ -229,6 +307,7 @@ function getDescrip(title, objSummary){
 	}
 	return returnDescrip;
 }
+*/
 
 function createDivs(parent, lstBtn, typename, displayname, id, number, title, descrip, body, updated, url, comments)
 { 
