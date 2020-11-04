@@ -242,8 +242,7 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		var divDescrip = document.createElement('DIV');
 		divDescrip.id = typename + 'Descrip' + id;
 		divDescrip.className = typename + 'Descrip';
-		//divDescrip.innerHTML = descrip;
-		divDescrip.innerHTML = getDescrip(title);
+		divDescrip.innerHTML = descrip;
 		parent.appendChild(divDescrip);
 	}
 
