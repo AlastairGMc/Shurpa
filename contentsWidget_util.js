@@ -42,6 +42,7 @@ function btnVClick(btn, bVisible)	// software button click
 function btnClick()		// user button click
 {	
 	var icons = eval(this.getAttribute('icon'));
+	alert('this.id = ' + this.id);
 	
 	if (icons)
 	{
