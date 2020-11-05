@@ -42,7 +42,7 @@ function btnVClick(btn, bVisible)	// software button click
 function btnClick()		// user button click
 {	
 	var icons = eval(this.getAttribute('icon'));
-	alert('this.id = ' + this.id);
+	//alert('this.id = ' + this.id);
 	
 	if (icons)
 	{
@@ -195,7 +195,8 @@ function formatContents(widgetDivName)
 				//var c = chapterList[i];
 				var chTitle = structure['section'][k]['chapter'][i].title;
 				var chDescrip = getDescrip(chTitle)
-				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', i, chaptNumber++, chTitle, chDescrip, null, null, null, null);
+				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', chaptNumber, chaptNumber, chTitle, chDescrip, null, null, null, null);
+				chaptNumber++;
 
 				var sceneUL = document.createElement("UL");
 				sceneUL.className = 'SceneUL';
