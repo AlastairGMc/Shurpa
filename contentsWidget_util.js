@@ -174,7 +174,7 @@ function formatContents(widgetDivName)
 
 			var secTitle = structure['section'][k].title;
 			var secDescrip = getDescrip(secTitle)
-			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', sec.id, k+1, secTitle, secDescrip, null, null, null, null);
+			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', k, k+1, secTitle, secDescrip, null, null, null, null);
 
 			var chapterUL = document.createElement("UL");
 			chapterUL.className = 'ChapterUL';
@@ -194,7 +194,7 @@ function formatContents(widgetDivName)
 				//var c = chapterList[i];
 				var chTitle = structure['section'][k]['chapter'][i].title;
 				var chDescrip = getDescrip(chTitle)
-				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', c.id, chaptNumber++, chTitle, chDescrip, null, null, null, null);
+				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', i, chaptNumber++, chTitle, chDescrip, null, null, null, null);
 
 				var sceneUL = document.createElement("UL");
 				sceneUL.className = 'SceneUL';
