@@ -1,6 +1,8 @@
 /* postData.js */
 
 let scenes = [];
+
+/*
 let chapters = [];
 let sections = [];
 
@@ -17,7 +19,7 @@ chapters.push({id:5, sort:5, link:'The Middle', title:'Friday', descrip:'Chapter
 chapters.push({id:6, sort:6, link:'The End', title:'Saturday', descrip:'Chapter plan: The last straw and breakup.'});
 chapters.push({id:7, sort:7, link:'The End', title:'Sunday', descrip:'Chapter plan: Resolution. Lyre and Eager go their own ways, sadder but wiser.'});
 chapters.sort(function(a, b) {return a.sort - b.sort;});
-
+*/
 
 function getScene(id)
 {
