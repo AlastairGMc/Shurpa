@@ -27,7 +27,7 @@ function btnVClick(btn, bVisible)	// software button click
 	if (icons)
 	{
 		var container = document.getElementById(btn.getAttribute('ContainerId'));
-		container.style.display = (bVisible ? 'block' : 'none');
+		container.display = (bVisible ? 'block' : 'none');
 		btn.innerHTML = icons[+bVisible];
 		btn.setAttribute('iconIdx', +bVisible);	// store the new state
 	}
@@ -311,6 +311,7 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		divDescrip.id = typename + 'Descrip' + id;
 		divDescrip.className = typename + 'Descrip';
 		divDescrip.innerHTML = descrip;
+		divDescrip.style = 'display="none"';
 		parent.appendChild(divDescrip);
 	}
 
