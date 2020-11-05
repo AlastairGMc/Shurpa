@@ -311,7 +311,7 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		divDescrip.id = typename + 'Descrip' + id;
 		divDescrip.className = typename + 'Descrip';
 		divDescrip.innerHTML = descrip;
-		divDescrip.style = 'display="none"';
+		//divDescrip.style = 'display="none"';
 		parent.appendChild(divDescrip);
 	}
 
