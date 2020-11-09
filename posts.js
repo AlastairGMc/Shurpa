@@ -145,7 +145,7 @@ function getPostData(root)
 		//var body = root.feed.entry[i].content.$t;
 		var body = root.feed.entry[i].summary.$t;
 		//var preview = getPreview(body);
-		//var descrip = getSceneDescrip(body);
+		var descrip = null;	//getSceneDescrip(body);
 		var comments = getNumComments(root.feed.entry[i]);
 
 		scenes[i] = {
