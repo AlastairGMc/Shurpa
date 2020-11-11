@@ -1,3 +1,11 @@
-.q1 {
-  background-color: yellow;
+@media only screen and (orientation: portrait) {
+	.q1 {
+		background-color: cyan;
+	}
+}
+ 
+@media only screen and (orientation: landscape) {
+	.q1 {
+		background-color: blue;
+	}
 }
