@@ -2,6 +2,9 @@
 	.q1 {
 		background-color: cyan;
 	}
+	.body {
+		background-image: none;	
+	}
 }
  
 @media only screen and (orientation: landscape) {
