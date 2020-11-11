@@ -3,12 +3,17 @@
 		background-color: red;
 	}
 	.body {
-		background-image: none;	
+		/* background-image: none;	*/
+        	min-width: $(content.width);
 	}
 }
  
 @media only screen and (orientation: landscape) {
 	.q1 {
 		background-color: pink;
+	}
+	.body {
+		/* background-image: none;	*/
+        	min-width: $(content.width);
 	}
 }
