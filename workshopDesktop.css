@@ -3,7 +3,7 @@
 		background-color: red;
 	}
 	.body {
-		/* background-image: none;	*/
+		background-image: none;
         	min-width: $(content.width);
 		padding: 0;
 	}
