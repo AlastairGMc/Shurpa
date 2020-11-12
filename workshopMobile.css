@@ -3,10 +3,11 @@
 		background-color: cyan;
 	}
 	.body {
-		/* background-image: none;	*/
-        	min-width: $(content.width);
 		padding: 0;
 	}
+	.Header .description {
+      		font: normal bold 80px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      }
 }
  
 @media only screen and (orientation: landscape) {
@@ -14,8 +15,10 @@
 		background-color: blue;
 	}
 	.body {
-		/* background-image: none;	*/
         	min-width: $(content.width);
 		padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread);
 	}
+	.Header .description {
+      		font: normal bold 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      }
 }
