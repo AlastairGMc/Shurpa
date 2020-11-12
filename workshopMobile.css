@@ -16,19 +16,19 @@
 	}	
 
 	.Header h1 {
-		font: normal normal 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+		font: normal normal 100px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
 
 	.Header .description {
-		font-size: 160%;
+		font: normal normal 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
 	
 	.background-pages {
-		font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+		font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
       
 	.aboutPages {
-		font-size: 100%;
+		font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
       
 	.content-outer {
