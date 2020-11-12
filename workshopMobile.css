@@ -7,53 +7,53 @@
 	}
 	.Header .description {
       		font: normal bold 80px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-      }
-      .Header .description {
-      	font: normal bold 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-      }
+      	}
+      	.Header .description {
+      		font: normal bold 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      	}
 
-      .background-pages {
-      	font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-      }
+      	.background-pages {
+      		font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      	}
       
-      .aboutPages {
-      	font-size: 100%;
-      }
+      	.aboutPages {
+      		font-size: 100%;
+      	}
       
-      .content-outer {
-          width: 100%;
-          min-width: 100%;
-          max-width: 100%;
-      }
+      	.content-outer {
+          	width: 100%;
+          	min-width: 100%;
+          	max-width: 100%;
+      	}
          
-      .main-inner .columns {
-        padding-right: 0px;
-      }
+      	.main-inner .columns {
+        	padding-right: 0px;
+      	}
 
-      .main-inner .fauxcolumn-center-outer {
-        right: 0px;
-      }
+      	.main-inner .fauxcolumn-center-outer {
+        	right: 0px;
+      	}
 
-      .main-inner .fauxcolumn-right-outer {
-        width: 0px;
-      }
+      	.main-inner .fauxcolumn-right-outer {
+        	width: 0px;
+      	}
       
-      .column-right-outer {
-      	display: none;
-      }
+      	.column-right-outer {
+      		display: none;
+      	}
       
-      .post-body {
-        font-size: 250%;
-        line-height: 1.4;
-      }
+      	.post-body {
+        	font-size: 250%;
+        	line-height: 1.4;
+      	}
 
-      .widget-content-HTML1 {
-      	display: block;
-      }
+      	.widget-content-HTML1 {
+      		display: block;
+      	}
       
-      .widget-content-HTML2 {
-      	display: block;
-      }
+      	.widget-content-HTML2 {
+      		display: block;
+      	}
 }	
  
 @media only screen and (orientation: landscape) {
@@ -68,49 +68,49 @@
 	
 	.Header .description {
       		font: normal bold 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-      }
+      	}
 	
-      .background-pages {
-      	font: normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-      }
+      	.background-pages {
+      		font: normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+      	}
       
-      .aboutPages {
-      	font-size: 18px;
-      }
+      	.aboutPages {
+      		font-size: 18px;
+      	}
       
-      .content-outer, .content-fauxcolumn-outer, .region-inner {
-        min-width: $(content.width);
-        max-width: $(content.width);
-        _width: $(content.width);
-      }
+      	.content-outer, .content-fauxcolumn-outer, .region-inner {
+        	min-width: $(content.width);
+        	max-width: $(content.width);
+        	_width: $(content.width);
+      	}
          
-      .main-inner .columns {
-        padding-right: 260px;
-      }
+      	.main-inner .columns {
+        	padding-right: 260px;
+      	}
 
-      .main-inner .fauxcolumn-center-outer {
-        right: 260px;
-      }
+      	.main-inner .fauxcolumn-center-outer {
+        	right: 260px;
+      	}
 
-      .main-inner .fauxcolumn-right-outer {
-        width: 260px;
-      }
+      	.main-inner .fauxcolumn-right-outer {
+        	width: 260px;
+      	}
       
-      .column-right-outer {
-      	display: block;
-      }
+      	.column-right-outer {
+      		display: block;
+      	}
 
-      .post-body {
-        font-size: 110%;
-        line-height: 1.4;
-      }
+      	.post-body {
+        	font-size: 110%;
+        	line-height: 1.4;
+      	}
       
-      .widget-content-HTML1 {
-      	display: none;
-      }
+      	.widget-content-HTML1 {
+      		display: none;
+      	}
       
-      .widget-content-HTML2 {
-      	display: none;
-      }
+      	.widget-content-HTML2 {
+      		display: none;
+      	}
 }
 
