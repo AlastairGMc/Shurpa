@@ -11,6 +11,10 @@
 		padding-bottom: 0;
 	}
 
+	body .navbar {
+		height: 0;
+	}	
+	
 	.background-pages {
 		font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
