@@ -4,6 +4,13 @@
 		background-color: pink;
 	}
 
+	.body {
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+
 	.background-pages {
 		font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
