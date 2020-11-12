@@ -5,17 +5,24 @@
 	}
 
 	body {
-		padding: 0;
+		padding-top: 0px;
+		padding-right: 0px;
+		padding-bottom: 0px;
+		padding-left: 0px;		
 	}
 
 	body .navbar {
 		height: 0;
 	}	
 
-	.Header .description {
-		font: normal bold 80px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	.Header h1 {
+		font: normal normal 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
 
+	.Header .description {
+		font-size: 160%;
+	}
+	
 	.background-pages {
 		font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
@@ -72,10 +79,6 @@
 	body .navbar {
 		height: 0;
 	}	
-	
-	.Header .description {
-		font: normal bold 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-	}
 	
 	.background-pages {
 		font: normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
