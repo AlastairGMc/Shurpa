@@ -34,7 +34,7 @@
 	.content-outer, .content-fauxcolumn-outer, .region-inner {
 		/* min-width: 860px;
 		max-width: 860px; */
-		_width: 100%;
+		_width: 1100px;
 	}	
          
 	.main-inner .columns {
