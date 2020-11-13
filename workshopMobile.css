@@ -31,11 +31,11 @@
 		font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
       
-	.content-outer, .content-fauxcolumn-outer, .region-inner {
-		/* min-width: 860px;
-		max-width: 860px; */
-		width: 1300px;
-	}	
+      	.content-outer, .content-fauxcolumn-outer, .region-inner {
+        	min-width: 1300px;
+        	max-width: 1300px;
+        	_width: 1300px;
+      	}
          
 	.main-inner .columns {
 		padding-right: 0px;
