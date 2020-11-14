@@ -24,19 +24,21 @@ function gotoPage(url){
 function btnVClick(btn, bVisible)	// software button click
 {	
 	try {
-		//var id = btn.id;
+		var id = btn.id;
 		var icons = eval(btn.getAttribute('icon'));
 
 		if (icons) {
 			//alert(id + ' with icons');
 			var container = document.getElementById(btn.getAttribute('ContainerId'));
 			container.display = (bVisible ? 'block' : 'none');
+			alert(id + ' container.display = ' + container.display);
 			btn.innerHTML = icons[+bVisible];
 			btn.setAttribute('iconIdx', +bVisible);	// store the new state
 		} else {
 			//alert(id + ' without icons');
 			var container = document.getElementById(btn.getAttribute('ContainerId'));
 			container.style.display = (bVisible ? 'none' : 'block');
+			alert(id + ' container.display = ' + container.display);
 		}
 	} catch(err) {
 		alert(err.message);	
