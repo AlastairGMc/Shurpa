@@ -377,13 +377,13 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 		divTitle.appendChild(upd);
 	}
 	
-	if (url)
+	if (url && body)
 	{
 		var postLink = document.createElement('A');
 		postLink.id = typename + 'PostLink' + id;
 		postLink.className = typename + 'PostLink';
 		postLink.href = url;
-		postLink.text = '  read more'
+		postLink.text = ' ... read more'
 		divContainer.appendChild(postLink);
 	}
 /*
