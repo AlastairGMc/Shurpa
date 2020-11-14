@@ -1,3 +1,16 @@
+body .navbar {
+	height: 0;
+}	
+	
+.backgroundPages {
+	font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+      
+.aboutPages {
+	font-size: 100%;
+}
+
+
 @media only screen and (orientation: portrait) {
 
 	.q1 {
@@ -6,18 +19,6 @@
 
 	body {
 		padding: 0;
-	}
-
-	body .navbar {
-		height: 0;
-	}	
-	
-	.backgroundPages {
-		font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-	}
-      
-	.aboutPages {
-		font-size: 100%;
 	}
 }
 
