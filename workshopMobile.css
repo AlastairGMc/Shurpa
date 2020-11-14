@@ -1,3 +1,8 @@
+body .navbar {
+	height: 0;
+}	
+
+
 @media only screen and (orientation: portrait) {
 
 	.q1 {
@@ -5,15 +10,8 @@
 	}
 
 	body {
-		padding-top: 0px;
-		padding-right: 0px;
-		padding-bottom: 0px;
-		padding-left: 0px;		
+		padding: 0;
 	}
-
-	body .navbar {
-		height: 0;
-	}	
 
 	.Header h1 {
 		font: normal normal 100px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
@@ -23,7 +21,7 @@
 		font: normal normal 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
 	
-	.background-pages {
+	.backgroundPages {
 		font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 	}
       
