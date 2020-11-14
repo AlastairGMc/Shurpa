@@ -4,10 +4,12 @@ body .navbar {
 
 .Header .description {
 	font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	color: #777777;
 }
 
 .backgroundPages {
 	font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	color: #777777;
 }
       
 .aboutPages {
