@@ -34,7 +34,7 @@ function btnVClick(btn, bVisible)	// software button click
 			btn.setAttribute('iconIdx', +bVisible);	// store the new state
 		} else {
 			var container = document.getElementById(btn.getAttribute('ContainerId'));
-			container.style.display = (bVisible ? 'none' : 'block');
+			container.style.display = (bVisible ? 'block' : 'none');
 			alert(btn.id + ' display = ' + container.style.display);
 		}
 	} catch(err) {
