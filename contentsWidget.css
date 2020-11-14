@@ -11,6 +11,7 @@
 .SectionTitleBtn {
 	background-color: white;
 	color: #3399bb;
+	font-size: 120%; 
 	padding-left: 0px;
 	padding-bottom: 5px;
 	cursor: pointer;
