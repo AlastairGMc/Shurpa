@@ -27,6 +27,7 @@ function btnVClick(btn, bVisible)	// software button click
 
 	if (icons)
 	{
+		alert(btn.classname + ' with icons');
 		var container = document.getElementById(btn.getAttribute('ContainerId'));
 		container.display = (bVisible ? 'block' : 'none');
 		btn.innerHTML = icons[+bVisible];
@@ -34,6 +35,7 @@ function btnVClick(btn, bVisible)	// software button click
 	}
 	else
 	{
+		alert(btn.classname + ' without icons');
 		var container = document.getElementById(btn.getAttribute('ContainerId'));
 		container.style.display = (bVisible ? 'none' : 'block');
 	}
