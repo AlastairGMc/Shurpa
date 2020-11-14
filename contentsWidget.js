@@ -23,21 +23,22 @@ function gotoPage(url){
 
 function btnVClick(btn, bVisible)	// software button click
 {	
-	var icons = eval(btn.getAttribute('icon'));
+	try {
+		var icons = eval(btn.getAttribute('icon'));
 
-	if (icons)
-	{
-		alert(btn.classname + ' with icons');
-		var container = document.getElementById(btn.getAttribute('ContainerId'));
-		container.display = (bVisible ? 'block' : 'none');
-		btn.innerHTML = icons[+bVisible];
-		btn.setAttribute('iconIdx', +bVisible);	// store the new state
-	}
-	else
-	{
-		alert(btn.classname + ' without icons');
-		var container = document.getElementById(btn.getAttribute('ContainerId'));
-		container.style.display = (bVisible ? 'none' : 'block');
+		if (icons) {
+			alert(btn.className + ' with icons');
+			var container = document.getElementById(btn.getAttribute('ContainerId'));
+			container.display = (bVisible ? 'block' : 'none');
+			btn.innerHTML = icons[+bVisible];
+			btn.setAttribute('iconIdx', +bVisible);	// store the new state
+		} else {
+			alert(btn.className + ' without icons');
+			var container = document.getElementById(btn.getAttribute('ContainerId'));
+			container.style.display = (bVisible ? 'none' : 'block');
+		}
+	} catch(err) {
+		alert(err.message);	
 	}
 }
 
