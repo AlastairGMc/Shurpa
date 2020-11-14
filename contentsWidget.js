@@ -30,15 +30,15 @@ function btnVClick(btn, bVisible)	// software button click
 		if (icons) {
 			//alert(id + ' with icons');
 			var container = document.getElementById(btn.getAttribute('ContainerId'));
-			container.display = (bVisible ? 'block' : 'none');
-			alert(id + ' container.display = ' + container.display);
+			container.style.display = (bVisible ? 'block' : 'none');
+			alert(id + ' display = ' + container.style.display);
 			btn.innerHTML = icons[+bVisible];
 			btn.setAttribute('iconIdx', +bVisible);	// store the new state
 		} else {
 			//alert(id + ' without icons');
 			var container = document.getElementById(btn.getAttribute('ContainerId'));
 			container.style.display = (bVisible ? 'none' : 'block');
-			alert(id + ' container.display = ' + container.display);
+			alert(id + ' display = ' + container.style.display);
 		}
 	} catch(err) {
 		alert(err.message);	
