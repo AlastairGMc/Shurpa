@@ -111,7 +111,7 @@ function getID(tag)
 	return tag.slice(idx);
 }
 
-
+/*
 function getPreview(body)
 {
 	var className = 'NotesClass';
@@ -129,7 +129,7 @@ function getPreview(body)
 	}
 	return preview;
 }
-
+*/
 
 function getPostData(root)
 {
