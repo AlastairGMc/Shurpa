@@ -1,13 +1,17 @@
 body .navbar {
 	height: 0;
 }	
-	
+
+.Header .description {
+	font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+
 .backgroundPages {
-	font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 }
       
 .aboutPages {
-	font: normal normal 26px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
 }
 
 
