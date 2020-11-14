@@ -24,21 +24,18 @@ function gotoPage(url){
 function btnVClick(btn, bVisible)	// software button click
 {	
 	try {
-		var id = btn.id;
 		var icons = eval(btn.getAttribute('icon'));
 
 		if (icons) {
-			//alert(id + ' with icons');
 			var container = document.getElementById(btn.getAttribute('ContainerId'));
 			container.style.display = (bVisible ? 'block' : 'none');
-			alert(id + ' display = ' + container.style.display);
+			alert(btn.id + ' display = ' + container.style.display);
 			btn.innerHTML = icons[+bVisible];
 			btn.setAttribute('iconIdx', +bVisible);	// store the new state
 		} else {
-			//alert(id + ' without icons');
 			var container = document.getElementById(btn.getAttribute('ContainerId'));
 			container.style.display = (bVisible ? 'none' : 'block');
-			alert(id + ' display = ' + container.style.display);
+			alert(btn.id + ' display = ' + container.style.display);
 		}
 	} catch(err) {
 		alert(err.message);	
@@ -81,6 +78,8 @@ function clearExpandCollapseBtns()
 
 function clickClassBtns(bAction, classname)
 {
+	alert(classname + ' bAction = ' + bAction);
+	
 	var btns = document.getElementsByClassName(classname);
 	for (var i = 0; i < btns.length; i++)
     {
