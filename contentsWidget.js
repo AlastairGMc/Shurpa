@@ -26,7 +26,7 @@ function btnVClick(btn, bVisible)	// software button click
 	try {
 		var container = document.getElementById(btn.getAttribute('ContainerId'));
 		container.style.display = (bVisible ? 'block' : 'none');
-		alert(btn.id + ' display = ' + container.style.display);
+		//alert(btn.id + ' display = ' + container.style.display);
 		
 		var icons = eval(btn.getAttribute('icon'));
 		if (icons) {
@@ -74,7 +74,7 @@ function clearExpandCollapseBtns()
 
 function clickClassBtns(bAction, classname)
 {
-	alert(classname + ' bAction = ' + bAction);
+	//alert(classname + ' bAction = ' + bAction);
 	
 	var btns = document.getElementsByClassName(classname);
 	for (var i = 0; i < btns.length; i++)
