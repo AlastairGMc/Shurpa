@@ -7,8 +7,8 @@ body .navbar {
 	color: #777777;
 }
 
-.descriptionwrapper {
-	margin: 0;	
+.header-inner .Header .descriptionwrapper {
+	margin-bottom: 5px;
 }
 
 .backgroundPages {
