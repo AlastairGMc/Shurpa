@@ -321,7 +321,7 @@ function createDivs(parent, lstBtn, typename, displayname, id, number, title, de
 	divContainer.id = typename + 'Container' + id;
 	divContainer.className = typename + 'Container';
 	divContainer.setAttribute('showHideBtnId', typename + 'TitleBtn' + id);
-	divContainer.innerHTML = body + ' ...';
+	divContainer.innerHTML = body;
 	parent.appendChild(divContainer);
 
 
