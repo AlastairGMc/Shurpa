@@ -47,7 +47,7 @@
 			var sceneNumber = 1;
 			var root = document.getElementById(widgetDivName);
 
-			if(typeof(widget) != 'undefined' && widget != null)
+			if(typeof(root) != 'undefined' && root != null)
 			{
 				/* Note: structure[] is defined in contentsWidget_data.js */
 				for (var k = 0; k < structure['section'].length; k++)
