@@ -64,7 +64,7 @@
 						var chTitle = 'Chapter ' + chapterNumber + ': ' + title;
 						let chapter = addUnit(section, 'Chapter', chTitle, null, null, chSummary, null, null);
 
-						var sceneList = filterBy(scenes, chTitle);
+						var sceneList = filterBy(scenes, title);
 						for (var j = 0; j < sceneList.length; j++)
 						{
 							var s = sceneList[j];
