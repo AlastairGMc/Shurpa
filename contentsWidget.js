@@ -1,417 +1,165 @@
 /* contentsWidget.js */
 
+	var uniqueId = 0;
+	const chevronUp = "https://alastairgmc.github.io/Shurpa/chevron-up.png";
+	const chevronDown = "https://alastairgmc.github.io/Shurpa/chevron-down.png";
+	let summaryBtnIcon =  [chevronUp, chevronDown]; // idx 0 means the container is hidden; idx 1 means the container is visible
 
-const downArrow = '▼';
-const rightArrow = '▶';
-const upArrow = '&#9650; ';
-const plus = '&#65291;';
-const minus = '&#65293;';
-const downChevron = '&#8964;';
-const upChevron = '&#8963;';
+		function getUniqueId(){
+			return uniqueId++;
+		}
 
-const upTriangle = '⏶';
-const downTriangle = '⏷';
+		function gotoPage(url){
+			window.location.href = url;
+		}
 
-let titleBtnIcon = [rightArrow, downArrow];			// idx 0 means the container is hidden; idx 1 means the container is visible
-let descripBtnIcon = [downTriangle, upTriangle];
+		function getDescrip(title){
+			var returnDescrip = '';
 
-
-function gotoPage(url){
-	window.location.href = url;
-}
-
-
-function btnVClick(btn, bVisible)	// software button click
-{	
-	try {
-		var container = document.getElementById(btn.getAttribute('ContainerId'));
-		container.style.display = (bVisible ? 'block' : 'none');
-		//alert(btn.id + ' display = ' + container.style.display);
+			/* Note: summary[] is defined in contentsWidget_data.js */
+			for (var i=0; i < summary['summary'].length; i++){
+				if (title == summary['summary'][i].title){
+					returnDescrip = summary['summary'][i].descrip;
+					break;
+				}
+			}
+			return returnDescrip;
+		}
 		
-		var icons = eval(btn.getAttribute('icon'));
-		if (icons) {
-			btn.innerHTML = icons[+bVisible];
-			btn.setAttribute('iconIdx', +bVisible);	// store the new state
+		function filterBy(objArray, title)
+		{
+			let filteredLst = [];
+			for (var i = 0; i < objArray.length; i++)
+			{
+				if (objArray[i].link == title)
+				{
+					filteredLst.push(objArray[i]);
+				}
+			}
+			return filteredLst;
 		}
-	} catch(err) {
-		alert(err.message);	
-	}
-}
 
 
-function btnClick()		// user button click
-{	
-	var icons = eval(this.getAttribute('icon'));
-	//alert('this.id = ' + this.id);
-	
-	if (icons)
-	{
-		var iconIdx = eval(this.getAttribute('iconIdx'));
-		var container = document.getElementById(this.getAttribute('ContainerId'));
-		var bVisible = (!(!!iconIdx));	// convert int to boolean, then flip
+		function formatContents(widgetDivName){
+			var bReturn = false;
+			var sectionNumber = 1;
+			var chapterNumber = 1;
+			var sceneNumber = 1;
+			var root = document.getElementById(widgetDivName);
+
+			if(typeof(widget) != 'undefined' && widget != null)
+			{
+				/* Note: structure[] is defined in contentsWidget_data.js */
+				for (var k = 0; k < structure['section'].length; k++)
+				{
+					var title = structure['section'][k].title;
+					var secSummary = getDescrip(title);
+					var secTitle = 'Section ' + sectionNumber + ': ' + secTitle;
+					let section = addUnit(root, 'Section', secTitle, null, null, secSummary, null, null);
+
+					for (var i = 0; i < structure['section'][k]['chapter'].length; i++)
+					{
+						var title = structure['section'][k]['chapter'][i].title; 
+						var chSummary = getDescrip(title)
+						var chTitle = 'Chapter ' + chapterNumber + ': ' + title;
+						let chapter = addUnit(section, 'Chapter', chTitle, null, null, chSummary, null, null);
+
+						var sceneList = filterBy(scenes, chTitle);
+						for (var j = 0; j < sceneList.length; j++)
+						{
+							var s = sceneList[j];
+							var scTitle = 'Scene ' + sceneNumber + ': ' + s.title;
+							addUnit(chapter, 'Scene', scTitle, s.updated, s.comments, null, s.body, s.url);
+							sceneNumber++;
+						}
+						chapterNumber++;
+					}
+					sectionNumber++;
+				}
+				bReturn = true;
+			}
+        		return bReturn;
+		}
+		
+
+		function addUnit(parent, type, title, updatedDate, numComments, summary, snippet, url){
+			var template = document.getElementById("template");
+			var unit = template.cloneNode(true);
+			unit.className = type + 'Unit';
+			unit.removeAttribute('id');
+			parent.appendChild(unit);
+
+			var containerDiv = unit.getElementsByClassName('Container')[0];
+
+			var titleDiv = unit.getElementsByClassName('Title')[0];
+			titleDiv.className = type + titleDiv.className;
+
+			var btnTargetId = getUniqueId();
+
+			var titleBtn = unit.getElementsByClassName("ContainerBtn")[0];
+			titleBtn.innerHTML = title;
+			titleBtn.setAttribute('btnTargetId', btnTargetId);
+			titleBtn.className = type + titleBtn.className;
+
+			containerDiv.id = btnTargetId;
+			containerDiv.className = type + containerDiv.className
+
+			if (snippet){
+				containerDiv.innerHTML = snippet;
+			}
+
+			if (snippet && url){
+				var postLink = document.createElement('A');
+				postLink.className = type + 'PostLink';
+				postLink.href = url;
+				containerDiv.innerHTML += ' ... ';
+				postLink.text = 'read more'
+				containerDiv.appendChild(postLink);
+			}
 			
-    		container.style.display = (bVisible ? 'block' : 'none');
-		this.innerHTML = icons[+bVisible];
-		this.setAttribute('iconIdx', +bVisible); 	// store the new state
-		//clearExpandCollapseBtns();
-	}
-	else
-	{
-		var container = document.getElementById(this.getAttribute('ContainerId'));
-		var bVisible = (container.style.display == 'none' ? false : true);
-		container.style.display = (bVisible ? 'none' : 'block');
-	}
-}
-
-
-
-function clearExpandCollapseBtns()
-{	
-	document.getElementById('chkExpand').checked = false;
-	document.getElementById('chkCollapse').checked = false;
-}
-
-
-function clickClassBtns(bAction, classname)
-{
-	//alert(classname + ' bAction = ' + bAction);
-	
-	var btns = document.getElementsByClassName(classname);
-	for (var i = 0; i < btns.length; i++)
-    {
-		btnVClick(btns[i], bAction);
-    }
-}
-
-
-function chkClick(chk)
-{	
-	if (chk.checked)
-    {
-		var bAction;
-
-		if (chk.id == 'chkExpand')
-        {
-			bAction = true;
-			document.getElementById('chkCollapse').checked = false;
-        }
-		else
-        {
-			bAction = false;
-			document.getElementById('chkExpand').checked = false;
-        }
-
-        clickClassBtns(bAction, 'SectionTitleBtn');
-        clickClassBtns(bAction, 'SectionDescripBtn');
-        clickClassBtns(bAction, 'ChapterTitleBtn');
-        clickClassBtns(bAction, 'ChapterDescripBtn');
-        clickClassBtns(bAction, 'SceneTitleBtn');
-        clickClassBtns(bAction, 'SceneDescripBtn');
-    }
-}
-
-function openContainers(btn)
-{
-	let stack = [];
-
-	stack.push(btn);
-
-	var container = btn.parentNode.parentNode;
-	var controlBtn = document.getElementById(container.getAttribute('showHideBtnId'));
-	while (container.id != 'book-body')
-    {
-		stack.push(controlBtn);
-		container = container.parentNode;
-		controlBtn = document.getElementById(container.getAttribute('showHideBtnId'));
-    }
-
-	for (var i = stack.length -1; i >= 0; i--)
-    {
-		btnVClick(stack[i], true)
-    }
-}
-
-
-function scrollIntoViewBtn()
-{ 
-	var btn = document.getElementById(this.getAttribute('targetId'));
-	openContainers(btn);
-
-	var parent = document.getElementById('book-body');		// the scroll window
-	var parentRect = parent.getBoundingClientRect();			
-
-	var btnRect = btn.getBoundingClientRect();
-	var newPos = (btnRect.top + parent.scrollTop) - parentRect.top;
-	parent.scrollTo({top: newPos, left: 0, behavior: 'smooth'});
-}
-
-
-function filterBy(objArray, title)
-{
-	let filteredLst = [];
-	for (var i = 0; i < objArray.length; i++)
-	{
-		if (objArray[i].link == title)
-		{
-			filteredLst.push(objArray[i]);
-		}
-	}
-	return filteredLst;
-}
-
-function formatContents(widgetDivName)
-{	
-	var bReturn = false;
-	var chaptNumber = 1;
-	var widget = document.getElementById(widgetDivName);
-
-	if(typeof(widget) != 'undefined' && widget != null)
-	{
-		//for (var k = 0; k < sections.length; k++)
-		for (var k = 0; k < structure['section'].length; k++)
-		{
-			var sectionLI = document.createElement("LI");
-			var sectionBtn = document.createElement("BUTTON");   
-			sectionBtn.className = 'shortcutSectionBtn';
-			sectionLI.appendChild(sectionBtn);
-
-			var secTitle = structure['section'][k].title;
-			var secDescrip = getDescrip(secTitle)
-			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', k, k+1, secTitle, secDescrip, null, null, null, null);
-
-			var chapterUL = document.createElement("UL");
-			chapterUL.className = 'ChapterUL';
-			sectionLI.appendChild(chapterUL);
-
-			//var chapterList = filterBy(chapters, sections[k].title);
-			//for (var i = 0; i < chapterList.length; i++)
-			for (var i = 0; i < structure['section'][k]['chapter'].length; i++)
-			{	
-				var chapterLI = document.createElement("LI");
-				chapterUL.appendChild(chapterLI);
-
-				var chapterBtn = document.createElement("BUTTON");   
-				chapterBtn.className = 'shortcutChapterBtn';
-				chapterLI.appendChild(chapterBtn);
-
-				//var c = chapterList[i];
-				var chTitle = structure['section'][k]['chapter'][i].title;
-				var chDescrip = getDescrip(chTitle)
-				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', chaptNumber, chaptNumber, chTitle, chDescrip, null, null, null, null);
-				chaptNumber++;
-
-				var sceneUL = document.createElement("UL");
-				sceneUL.className = 'SceneUL';
-				chapterLI.appendChild(sceneUL);
-
-				//var sceneList = filterBy(scenes, chapterList[i].title);
-				var sceneList = filterBy(scenes, chTitle);
-				for (var j = 0; j < sceneList.length; j++)
-				{
-					var sceneLI = document.createElement("LI");
-					sceneUL.appendChild(sceneLI);
-
-					var sceneBtn = document.createElement("BUTTON");   
-					sceneBtn.className = 'shortcutSceneBtn';
-					sceneLI.appendChild(sceneBtn);
-
-					var s = sceneList[j];
-					createDivs(chapterParent, sceneBtn, 'Scene', 'Scene', s.id, s.number, s.title, s.descrip, s.body, s.updated, s.url, s.comments);
-				}
+			var summaryBtn = unit.getElementsByClassName('SummaryBtn')[0];
+			var summaryDiv = unit.getElementsByClassName('Summary')[0];
+			if (summary){
+				var btnTargetId = getUniqueId();
+				summaryBtn.className = type + summaryBtn.className;
+				summaryBtn.setAttribute('btnTargetId', btnTargetId);
+				summaryDiv.id = btnTargetId;
+				summaryDiv.className = type + summaryDiv.className;
+				summaryDiv.innerHTML = summary;
+			} else {
+				summaryBtn.remove();
+				summaryDiv.remove();
 			}
-		}
-        	bReturn = true;
-	}
-	return bReturn;
-}
+			
 
-function getDescrip(title){
-	var returnDescrip = '';
-
-	for (var i=0; i < summary['summary'].length; i++){
-		if (title == summary['summary'][i].title){
-			returnDescrip = summary['summary'][i].descrip;
-			break;
-		}
-	}
-	return returnDescrip;
-}
-
-
-/*
-function formatContents(widgetDivName, objSummary)
-{	
-	var bReturn = false;
-	var chaptNumber = 1;
-	var widget = document.getElementById(widgetDivName);
-	if(typeof(widget) != 'undefined' && widget != null)
-	{
-		for (var k = 0; k < sections.length; k++)
-		{
-			var sectionLI = document.createElement("LI");
-			var sectionBtn = document.createElement("BUTTON");   
-			sectionBtn.className = 'shortcutSectionBtn';
-			sectionLI.appendChild(sectionBtn);
-			var sec = sections[k];
-			var secDescrip = getDescrip(sec.title, objSummary)
-			var sectionParent = createDivs(widget, sectionBtn, 'Section', 'Section', sec.id, k+1, sec.title, secDescrip, null, null, null, null);
-			var chapterUL = document.createElement("UL");
-			chapterUL.className = 'ChapterUL';
-			sectionLI.appendChild(chapterUL);
-			var chapterList = filterBy(chapters, sections[k].title);
-			for (var i = 0; i < chapterList.length; i++)
-			{	
-				var chapterLI = document.createElement("LI");
-				chapterUL.appendChild(chapterLI);
-				var chapterBtn = document.createElement("BUTTON");   
-				chapterBtn.className = 'shortcutChapterBtn';
-				chapterLI.appendChild(chapterBtn);
-				var c = chapterList[i];
-				var chDescrip = getDescrip(c.title, objSummary)
-				var chapterParent = createDivs(sectionParent, chapterBtn, 'Chapter', 'Chapter', c.id, chaptNumber++, c.title, chDescrip, null, null, null, null);
-				var sceneUL = document.createElement("UL");
-				sceneUL.className = 'SceneUL';
-				chapterLI.appendChild(sceneUL);
-				var sceneList = filterBy(scenes, chapterList[i].title);
-				for (var j = 0; j < sceneList.length; j++)
-				{
-					var sceneLI = document.createElement("LI");
-					sceneUL.appendChild(sceneLI);
-					var sceneBtn = document.createElement("BUTTON");   
-					sceneBtn.className = 'shortcutSceneBtn';
-					sceneLI.appendChild(sceneBtn);
-					var s = sceneList[j];
-					createDivs(chapterParent, sceneBtn, 'Scene', 'Scene', s.id, s.number, s.title, s.descrip, s.body, s.updated, s.url, s.comments);
-				}
+			var updateDiv = unit.getElementsByClassName('UpdatedDate')[0];
+			if (updatedDate){
+				updateDiv.className = type + updateDiv.className;
+				updateDiv.innerHTML = updatedDate;
+			} else {
+				updateDiv.remove();
 			}
+			
+
+			var numCommentsDiv = unit.getElementsByClassName('NumComments')[0];
+			if (numComments){
+				numCommentsDiv.className = type + numCommentsDiv.className;
+				numCommentsDiv.innerHTML = numComments;
+			} else {
+				numCommentsDiv.remove();
+			}
+
+			return containerDiv;
 		}
-        	bReturn = true;
-	}
-	return bReturn;
-}
-function getDescrip(title, objSummary){
-	var returnDescrip = '';
-	for (var i=0; i < objSummary['summary'].length; i++){
-		if (title == objSummary['summary'][i].title){
-			returnDescrip = objSummary['summary'][i].descrip;
-			break;
+
+
+		function btnClick(btn){
+			var targetId = btn.getAttribute('btnTargetId');
+			var target = document.getElementById(targetId);
+			var bVisible = (target.style.display == 'none' ? false : true);
+			target.style.display = (bVisible ? 'none' : 'block');
+
+			if (btn.tagName == 'IMG'){
+				btn.src = summaryBtnIcon[+bVisible];	
+			} 
 		}
-	}
-	return returnDescrip;
-}
-*/
-
-function createDivs(parent, lstBtn, typename, displayname, id, number, title, descrip, body, updated, url, comments)
-{ 
-	var divTitle = document.createElement('DIV');
-	divTitle.id = typename + 'Title' + id;
-	divTitle.className = typename + 'Title';
-	parent.appendChild(divTitle);	
-
-	if (descrip)
-	{
-		var divDescrip = document.createElement('DIV');
-		divDescrip.id = typename + 'Descrip' + id;
-		divDescrip.className = typename + 'Descrip';
-		divDescrip.innerHTML = descrip;
-		//divDescrip.style = 'display="none"';
-		parent.appendChild(divDescrip);
-	}
-
-	var divContainer = document.createElement('DIV');
-	divContainer.id = typename + 'Container' + id;
-	divContainer.className = typename + 'Container';
-	divContainer.setAttribute('showHideBtnId', typename + 'TitleBtn' + id);
-	divContainer.innerHTML = body;
-	parent.appendChild(divContainer);
-
-
-	titleBtn = document.createElement('BUTTON');
-	titleBtn.id = typename + 'TitleBtn' + id;
-	titleBtn.className = typename + 'TitleBtn';
-	titleBtn.innerHTML = displayname + ' ' + number + ': ' + title;
-
-	/*
-	titleBtn.innerHTML = titleBtnIcon[1];	// downArrow
-	titleBtn.setAttribute('icon', 'titleBtnIcon');
-	titleBtn.setAttribute('iconIdx', '1');
-	*/
-	titleBtn.setAttribute('ContainerId', divContainer.id)
-	titleBtn.setAttribute('descripBtnId', typename + 'DescripBtn' + id);
-	titleBtn.addEventListener('click', btnClick);          
-	divTitle.appendChild(titleBtn);
-
-	if (lstBtn)
-	{
-		lstBtn.setAttribute('targetId', titleBtn.id);
-		lstBtn.addEventListener('click', scrollIntoViewBtn);          
-		lstBtn.innerHTML = typename + ' ' + number + ': ' + title;
-	}
-
-	
-	var titleSpan = document.createElement('SPAN');
-	titleSpan.className = typename + 'TitleSpan';
-	//titleSpan.innerHTML = displayname + ' ' + number + ': ' + title;
-	divTitle.appendChild(titleSpan);
-	
-
-	if (descrip)
-	{
-		var descripBtn = document.createElement('BUTTON');
-		descripBtn.id = typename + 'DescripBtn' + id;
-		descripBtn.className = typename + 'DescripBtn';
-		descripBtn.innerHTML = descripBtnIcon[1];	// upTriangle
-		descripBtn.setAttribute('iconIdx', '1');
-		descripBtn.setAttribute('icon', 'descripBtnIcon');
-		descripBtn.setAttribute('ContainerId', divDescrip.id);
-		descripBtn.addEventListener('click', btnClick);          
-		//divTitle.appendChild(descripBtn);
-		titleSpan.appendChild(descripBtn);
-	}
-
-	if (updated)
-	{
-		var upd = document.createElement('SPAN');
-		upd.id = typename + 'Updated' + id;
-		upd.className = typename + 'Updated';
-		upd.innerHTML = updated;
-		divTitle.appendChild(upd);
-	}
-	
-	if (url && body)
-	{
-		var postLink = document.createElement('A');
-		postLink.id = typename + 'PostLink' + id;
-		postLink.className = typename + 'PostLink';
-		postLink.href = url;
-		postLink.text = ' ... read more'
-		divContainer.appendChild(postLink);
-	}
-/*
-	if (url)
-	{
-		var commentLinkTop = document.createElement('A');
-		commentLinkTop.id = typename + 'CommentLink' + id;
-		commentLinkTop.className = typename + 'CommentLink';
-		commentLinkTop.href = url;
-		commentLinkTop.innerHTML = 'Comments';
-		divTitle.appendChild(commentLinkTop);
-		var commentLinkBottom = document.createElement('A');
-		commentLinkBottom.id = typename + 'CommentLink' + id;
-		commentLinkBottom.className = typename + 'CommentLink';
-		commentLinkBottom.href = url;
-		commentLinkBottom.innerHTML = 'Comments';
-		divContainer.appendChild(commentLinkBottom);
-	}
-*/
-	if (comments)
-	{
-		var commentLbl = document.createElement('SPAN');
-		commentLbl.ID = typename + 'NumComments' + id;
-		commentLbl.className = typename + 'NumComments';
-		commentLbl.innerHTML = comments;
-		divTitle.appendChild(commentLbl);
-	}
-
-	return divContainer;
-}
