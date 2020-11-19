@@ -54,7 +54,7 @@
 				{
 					var title = structure['section'][k].title;
 					var secSummary = getDescrip(title);
-					var secTitle = 'Section ' + sectionNumber + ': ' + secTitle;
+					var secTitle = 'Section ' + sectionNumber + ': ' + title;
 					let section = addUnit(root, 'Section', secTitle, null, null, secSummary, null, null);
 
 					for (var i = 0; i < structure['section'][k]['chapter'].length; i++)
