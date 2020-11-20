@@ -9,21 +9,12 @@
 			font-weight: normal; 
 			line-height: 27px;
 		}
-		button {
-			background-color: white;
-			cursor: pointer;
-			border: none;
-			padding-bottom: 0;
-			outline: none;
-			font-size: inherit;
-			font-weight: inherit; 
-			font-family: inherit;
-			vertical-align: bottom;
-		}
 		.SectionTitle {
 			margin-bottom: 10px;
 		}
 		.SectionContainerBtn {
+			float: left;
+			cursor: pointer;
 			color: #3399bb;
 			font-size: 150%; 
 			font-weight: bold;  
@@ -32,6 +23,7 @@
 			cursor: pointer;
 			height: 20px;
 			vertical-align: bottom;
+			margin-left: 20px;
 		}
 		.SectionSummary {
 			margin-left: 50px;
@@ -44,6 +36,8 @@
 			margin-bottom: 10px;
 		}
 		.ChapterContainerBtn {
+			float: left;
+			cursor: pointer;
 			font-size: 120%; 
 			font-weight: bold;  
 		}
@@ -51,6 +45,7 @@
 			cursor: pointer;
 			height: 20px;
 			vertical-align: bottom;
+			margin-left: 20px;
 		}
 		.ChapterSummary {
 			margin-left: 50px;
@@ -60,18 +55,16 @@
 			margin-left: 20px;
 			margin-bottom: 30px;
 		}
-
-		.SceneUnit {
-			margin-bottom: 20px;
-		}
 		.SceneTitle {
 			padding-top: 5px;
-			padding-bottom: 2px;
+			padding-bottom: 5px;
 			border-color:grey;
 			border-top-style: solid; 
 			border-top-width: thin;
+			overflow:hidden;
 		}
 		.SceneContainerBtn {
+			cursor: pointer;
 			padding-left: 0px;
 			float: left;
 			width: 50%;
@@ -79,20 +72,16 @@
 			text-align: left;
 		}
 		.SceneUpdatedDate {
-			padding-top: 2px;
 			float: left;
 			white-space: nowrap;
 		}
 		.SceneNumComments {
-			padding-top: 2px;
 			float: right;
 			white-space: nowrap;
 		}
 		.SceneContainer {
-			/* font-family: Georgia,Times,Times New Roman,serif; */
 			font-family: lyontext-regular, georgia; 
-			/* font-size: 120%; */
-			margin-top: 20px;
 			margin-left: 30px;
+			margin-bottom: 10px;
 			clear: both;
 		}
