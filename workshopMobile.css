@@ -14,25 +14,29 @@ body .navbar {
 	}
 
 	.Header h1 {
-		font: normal normal 100px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+		/* font: normal normal 100px Arial, Tahoma, Helvetica, FreeSans, sans-serif; */
+		font-size: 200%;
 	}
 
 	.Header .description {
-		font: normal normal 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+		/* font: normal normal 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif; */
+		font-size: 160%;
 	}
 	
 	.backgroundPages {
-		font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+		/* font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif; */
+		font-size: 160%;
 	}
       
 	.aboutPages {
-		font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+		/* font: normal normal 30px Arial, Tahoma, Helvetica, FreeSans, sans-serif; */
+		font-size: 150%;
 	}
       
       	.content-outer, .content-fauxcolumn-outer, .region-inner {
-        	min-width: 1300px;
-        	max-width: 1300px;
-        	_width: 1300px;
+        	min-width: 1000px;
+        	max-width: 1000px;
+        	_width: 1000px;
       	}
          
 	.main-inner .columns {
