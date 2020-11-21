@@ -8,15 +8,15 @@ body .navbar {
 	font-size: 60px;
 }
 .Header .description {
-	font-size: 19.2px;	/* (12px * 160%) */
+	font-size: 20px;	/* 12px * 160% */
 	color: #777777;
 }
 .backgroundPages {
-	font-size: 19.2px;	/* (12px * 160%) */
+	font-size: 20px;	/* 12px * 160% */
 	color: #777777;
 }
 .aboutPages {
-	font-size: 13.3333px; 
+	font-size: 20px;	/* 13.3333px * 144% */
 }
 
 
