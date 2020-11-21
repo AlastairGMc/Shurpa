@@ -30,9 +30,9 @@ body .navbar {
 	}
       
       	.content-outer, .content-fauxcolumn-outer, .region-inner {
-        	min-width: 500px;
-        	max-width: 500px;
-        	_width: 500px;
+        	min-width: 110px;
+        	max-width: 110px;
+        	_width: 110px;
       	}
          
 	.main-inner .columns {
