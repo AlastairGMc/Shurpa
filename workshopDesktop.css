@@ -1,23 +1,22 @@
 body .navbar {
 	height: 0;
 }	
-
-.Header .description {
-	font-size: 160%;
-	color: #777777;
-}
-
 .header-inner .Header .descriptionwrapper {
 	margin-bottom: 5px;
 }
-
-.backgroundPages {
-	font-size: 160%;
+.Header h1 {
+	font-size: 60px;
+}
+.Header .description {
+	font-size: 19.2px;	/* (12px * 160%) */
 	color: #777777;
 }
-      
+.backgroundPages {
+	font-size: 19.2px;	/* (12px * 160%) */
+	color: #777777;
+}
 .aboutPages {
-	font-size: 100%; 
+	font-size: 13.3333px; 
 }
 
 
