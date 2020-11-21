@@ -31,20 +31,17 @@ body .navbar {
 		padding: 0;
 	}
 
-	:root {
-	  --fontScale: 150%;
-	}
 	.Header h1 {
-		font-size: var(--fontScale);
+		font-size: 150%;
 	}
 	.Header .description {
-		font-size: var(--fontScale);
+		font-size: 150%;
 	}
 	.backgroundPages {
-		font-size: var(--fontScale);
+		font-size: 150%;
 	}
 	.aboutPages {
-		font-size: var(--fontScale);
+		font-size: 150%;
 	}
 	
 }
@@ -55,20 +52,5 @@ body .navbar {
 		background-color: red;
 	}
 	
-	:root {
-	  --fontScale: 100%;
-	}
-	.Header h1 {
-		font-size: var(--fontScale);
-	}
-	.Header .description {
-		font-size: var(--fontScale);
-	}
-	.backgroundPages {
-		font-size: var(--fontScale);
-	}
-	.aboutPages {
-		font-size: var(--fontScale);
-	}
 
 }
