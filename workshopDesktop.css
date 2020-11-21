@@ -1,3 +1,4 @@
+
 body .navbar {
 	height: 0;
 }	
@@ -29,6 +30,23 @@ body .navbar {
 	body {
 		padding: 0;
 	}
+
+	:root {
+	  --fontScale: 150%;
+	}
+	.Header h1 {
+		font-size: var(--fontScale);
+	}
+	.Header .description {
+		font-size: var(--fontScale);
+	}
+	.backgroundPages {
+		font-size: var(--fontScale);
+	}
+	.aboutPages {
+		font-size: var(--fontScale);
+	}
+	
 }
 
 @media only screen and (orientation: landscape) {
@@ -36,4 +54,21 @@ body .navbar {
 	.q1 {
 		background-color: red;
 	}
+	
+	:root {
+	  --fontScale: 100%;
+	}
+	.Header h1 {
+		font-size: var(--fontScale);
+	}
+	.Header .description {
+		font-size: var(--fontScale);
+	}
+	.backgroundPages {
+		font-size: var(--fontScale);
+	}
+	.aboutPages {
+		font-size: var(--fontScale);
+	}
+
 }
