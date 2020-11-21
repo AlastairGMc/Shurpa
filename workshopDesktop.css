@@ -3,7 +3,8 @@ body .navbar {
 }	
 
 .Header .description {
-	font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	/* font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif; */
+	font-size: 20px;
 	color: #777777;
 }
 
