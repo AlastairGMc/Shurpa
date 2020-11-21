@@ -4,7 +4,7 @@ body .navbar {
 
 .Header .description {
 	/* font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif; */
-	font-size: 200%;
+	font-size: 160%;
 	color: #777777;
 }
 
@@ -13,7 +13,8 @@ body .navbar {
 }
 
 .backgroundPages {
-	font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	/* font: normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif; */
+	font-size: 160%;
 	color: #777777;
 }
       
