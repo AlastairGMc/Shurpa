@@ -11,7 +11,8 @@
 }
 .contentsWidgetTitle {
 	color: #3399bb;
-	font-size: 150%; 
+	/* font-size: 150%; */
+	font-size: 4rem;
 	font-weight: bold;  
 	text-decoration: underline;
 	margin-bottom: 20px;
@@ -23,7 +24,8 @@
 	float: left;
 	cursor: pointer;
 	color: #3399bb;
-	font-size: 130%; 
+	/* font-size: 130%; */
+	font-size: 3rem;
 	font-weight: bold;  
 }
 .SectionSummaryBtn {
@@ -45,14 +47,17 @@
 .ChapterContainerBtn {
 	float: left;
 	cursor: pointer;
-	font-size: 120%; 
+	/* font-size: 120%; */
+	font-size: 3rem;
 	font-weight: bold;  
 }
 .ChapterSummaryBtn {
 	cursor: pointer;
-	height: 20px;
+	/* height: 20px; */
+	height: 2rem;
 	vertical-align: bottom;
-	margin-left: 20px;
+	/* margin-left: 20px; */
+	margin-left: 2rem;
 }
 .ChapterSummary {
 	margin-left: 50px;
