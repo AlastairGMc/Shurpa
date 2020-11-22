@@ -22,16 +22,16 @@ body .navbar {
 	}
 
 	.Header h1 {
-		font-size: 5rem;
+		font-size: 4rem;
 	}
 	.Header .description {
 		font-size: 3rem;
 	}
 	.backgroundPages {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 	.aboutPages {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
     
       	.content-outer, .content-fauxcolumn-outer, .region-inner {
@@ -81,18 +81,18 @@ body .navbar {
 	}
 		
 	.Header h1 {
-		font-size: 5rem;
+		font-size: 4rem;
 	}
 	.Header .description {
 		font-size: 3rem;
 	}
 	.backgroundPages {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 	.aboutPages {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
-      
+    
 	.content-outer, .content-fauxcolumn-outer, .region-inner {
 		min-width: $(content.width);
 		max-width: $(content.width);
