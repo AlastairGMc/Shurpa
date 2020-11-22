@@ -31,7 +31,8 @@
 }
 .SectionSummaryBtn {
 	cursor: pointer;
-	height: 20px;
+	/* height: 20px; */
+	height: 2rem;
 	vertical-align: bottom;
 	margin-left: 20px;
 }
