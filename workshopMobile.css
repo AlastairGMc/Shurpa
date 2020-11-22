@@ -1,6 +1,23 @@
 body .navbar {
 	height: 0;
 }	
+.header-inner .Header .descriptionwrapper {
+	margin-bottom: 5px;
+}
+.Header h1 {
+	font-size: 60px;
+}
+.Header .description {
+	font-size: 20px;	/* 12px * 160% */
+	color: #777777;
+}
+.backgroundPages {
+	font-size: 20px;	/* 12px * 160% */
+	color: #777777;
+}
+.aboutPages {
+	font-size: 20px;	/* 13.3333px * 144% */
+}	
 
 @media only screen and (orientation: portrait) {
 
@@ -15,16 +32,12 @@ body .navbar {
 	.Header h1 {
 		font-size: 600%;
 	}
-
 	.Header .description {
 		font-size: 300%;
 	}
-	
 	.backgroundPages {
 		font-size: 300%;
-		color: #777777;
 	}
-      
 	.aboutPages {
 		font-size: 300%;
 	}
