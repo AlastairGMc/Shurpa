@@ -30,18 +30,18 @@ body .navbar {
 	}
 
 	.Header h1 {
-		font-size: 600%;
+		font-size: 4rem;
 	}
 	.Header .description {
-		font-size: 300%;
+		font-size: 3rem;
 	}
 	.backgroundPages {
-		font-size: 300%;
+		font-size: 2rem;
 	}
 	.aboutPages {
-		font-size: 300%;
+		font-size: 2rem;
 	}
-      
+    
       	.content-outer, .content-fauxcolumn-outer, .region-inner {
         	min-width: 1100px;
         	max-width: 1100px;
@@ -65,8 +65,7 @@ body .navbar {
 	}
       
 	.post-body {
-		font-size: 250%;
-		line-height: 1.4;
+		font-size: 2rem;
 	}
 
 	.widget-content-HTML1 {
@@ -89,12 +88,17 @@ body .navbar {
 		padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread);
 	}
 		
-	.background-pages {
-		font: normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+	.Header h1 {
+		font-size: 4rem;
 	}
-      
+	.Header .description {
+		font-size: 3rem;
+	}
+	.backgroundPages {
+		font-size: 2rem;
+	}
 	.aboutPages {
-		font-size: 18px;
+		font-size: 2rem;
 	}
       
 	.content-outer, .content-fauxcolumn-outer, .region-inner {
@@ -119,11 +123,6 @@ body .navbar {
 		display: block;
 	}
 
-	.post-body {
-		font-size: 110%;
-		line-height: 1.4;
-	}
-      
 	.widget-content-HTML1 {
 		display: none;
 	}
