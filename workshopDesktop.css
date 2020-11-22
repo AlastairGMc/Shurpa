@@ -32,16 +32,16 @@ body .navbar {
 	}
 
 	.Header h1 {
-		font-size: 150%;
+		font-size: 4rem;
 	}
 	.Header .description {
-		font-size: 150%;
+		font-size: 3rem;
 	}
 	.backgroundPages {
-		font-size: 150%;
+		font-size: 2rem;
 	}
 	.aboutPages {
-		font-size: 150%;
+		font-size: 2rem;
 	}
 	
 }
@@ -52,5 +52,17 @@ body .navbar {
 		background-color: red;
 	}
 	
+	.Header h1 {
+		font-size: 4rem;
+	}
+	.Header .description {
+		font-size: 3rem;
+	}
+	.backgroundPages {
+		font-size: 2rem;
+	}
+	.aboutPages {
+		font-size: 2rem;
+	}
 
 }
