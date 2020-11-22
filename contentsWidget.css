@@ -8,13 +8,13 @@
 	font-size: 18px; 
 	font-weight: normal; 
 	/* line-height: 27px; */
-	line-height: 1.7rem;
+	line-height: 3.5rem;
 }
 .contentsWidgetTitle {
 	color: #3399bb;
 	/* font-size: 150%; */
 	font-size: 4rem;
-	font-weight: bold;  
+	/* font-weight: bold; */  
 	text-decoration: underline;
 	margin-bottom: 20px;
 }
@@ -27,7 +27,7 @@
 	color: #3399bb;
 	/* font-size: 130%; */
 	font-size: 3rem;
-	font-weight: bold;  
+	/* font-weight: bold; */  
 }
 .SectionSummaryBtn {
 	cursor: pointer;
@@ -51,7 +51,7 @@
 	cursor: pointer;
 	/* font-size: 120%; */
 	font-size: 3rem;
-	font-weight: bold;  
+	/* font-weight: bold; */  
 }
 .ChapterSummaryBtn {
 	cursor: pointer;
