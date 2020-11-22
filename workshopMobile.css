@@ -4,20 +4,12 @@ body .navbar {
 .header-inner .Header .descriptionwrapper {
 	margin-bottom: 5px;
 }
-.Header h1 {
-	font-size: 60px;
-}
 .Header .description {
-	font-size: 20px;	/* 12px * 160% */
 	color: #777777;
 }
 .backgroundPages {
-	font-size: 20px;	/* 12px * 160% */
 	color: #777777;
 }
-.aboutPages {
-	font-size: 20px;	/* 13.3333px * 144% */
-}	
 
 @media only screen and (orientation: portrait) {
 
@@ -30,16 +22,16 @@ body .navbar {
 	}
 
 	.Header h1 {
-		font-size: 4rem;
+		font-size: 5rem;
 	}
 	.Header .description {
 		font-size: 3rem;
 	}
 	.backgroundPages {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 	.aboutPages {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
     
       	.content-outer, .content-fauxcolumn-outer, .region-inner {
@@ -89,16 +81,16 @@ body .navbar {
 	}
 		
 	.Header h1 {
-		font-size: 4rem;
+		font-size: 5rem;
 	}
 	.Header .description {
 		font-size: 3rem;
 	}
 	.backgroundPages {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 	.aboutPages {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
       
 	.content-outer, .content-fauxcolumn-outer, .region-inner {
