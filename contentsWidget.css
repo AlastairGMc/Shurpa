@@ -8,7 +8,7 @@
 	font-size: 18px; 
 	font-weight: normal; 
 	/* line-height: 27px; */
-	line-height: 3.5rem;
+	line-height: 4rem;
 }
 .contentsWidgetTitle {
 	color: #3399bb;
@@ -95,6 +95,8 @@
 }
 .SceneContainer {
 	font-family: lyontext-regular, georgia; 
+	font-size: 2rem; 
+	line-height: 2.4rem;
 	margin-left: 30px;
 	margin-bottom: 10px;
 	clear: both;
