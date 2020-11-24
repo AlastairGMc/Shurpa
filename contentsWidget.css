@@ -88,6 +88,7 @@
 .SceneContainer {
 	font-family: lyontext-regular, georgia; 
 	font-size: 2rem;
+	line-height: 3rem;
 	margin-left: 2rem;
 	margin-bottom: 1rem;
 	clear: both;
