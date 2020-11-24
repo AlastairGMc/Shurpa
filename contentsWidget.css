@@ -8,11 +8,13 @@
 	font-size: 18px; 
 	font-weight: normal; 
 	/* line-height: 27px; */
-	line-height: 4rem;
+	line-height: 3.5rem;
 }
 .contentsWidgetTitle {
 	color: #3399bb;
+	/* font-size: 150%; */
 	font-size: 4rem;
+	/* font-weight: bold; */  
 	text-decoration: underline;
 	margin-bottom: 20px;
 }
@@ -23,33 +25,40 @@
 	float: left;
 	cursor: pointer;
 	color: #3399bb;
+	/* font-size: 130%; */
 	font-size: 3rem;
-
+	/* font-weight: bold; */  
+}
 .SectionSummaryBtn {
 	cursor: pointer;
-	height: 20px;
+	/* height: 20px; */
+	height: 2rem;
 	vertical-align: bottom;
-	margin-left: 1rem
+	margin-left: 20px;
 }
 .SectionSummary {
 	margin-left: 50px;
-	margin-bottom: 1rem
+	margin-bottom: 10px;
 }
 .SectionContainer {
-	margin-left: 1rem
+	margin-left: 20px;
 }
 .ChapterTitle {
-	margin-bottom: 1rem
+	margin-bottom: 10px;
 }
 .ChapterContainerBtn {
 	float: left;
 	cursor: pointer;
+	/* font-size: 120%; */
 	font-size: 3rem;
+	/* font-weight: bold; */  
 }
 .ChapterSummaryBtn {
 	cursor: pointer;
+	/* height: 20px; */
 	height: 2rem;
 	vertical-align: bottom;
+	/* margin-left: 20px; */
 	margin-left: 2rem;
 }
 .ChapterSummary {
@@ -71,7 +80,6 @@
 .SceneContainerBtn {
 	cursor: pointer;
 	padding-left: 0px;
-	font-size: 2rem;
 	float: left;
 	width: 50%;
 	white-space: nowrap;
@@ -87,9 +95,7 @@
 }
 .SceneContainer {
 	font-family: lyontext-regular, georgia; 
-	font-size: 2rem;
-	line-height: 3rem;
-	margin-left: 2rem;
-	margin-bottom: 1rem;
+	margin-left: 30px;
+	margin-bottom: 10px;
 	clear: both;
 }
