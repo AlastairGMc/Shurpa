@@ -25,7 +25,7 @@ body .navbar {
 
 
 html {
-  font-size: 6px;
+  normal normal 6px Arial, Tahoma, Helvetica, FreeSans, sans-serif
 }
 
 @media only screen and (orientation: portrait) {
