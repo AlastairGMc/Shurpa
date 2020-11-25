@@ -26,9 +26,6 @@ body .navbar {
 
 @media only screen and (orientation: portrait) {
 
-	html {
-	  normal normal 6px Arial, Tahoma, Helvetica, FreeSans, sans-serif
-	}
 	
 	.q1 {
 		background-color: pink;
@@ -59,6 +56,10 @@ body .navbar {
 		background-color: red;
 	}
 	
+	html {
+	  normal normal 2px Arial, Tahoma, Helvetica, FreeSans, sans-serif
+	}
+
 	.Header h1 {
 		font-size: 4rem;
 	}
