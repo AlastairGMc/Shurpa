@@ -24,6 +24,12 @@ body .navbar {
 */
 
 
+html {
+  	normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif
+}
+
+
+
 @media only screen and (orientation: portrait) {
 
 	
@@ -56,10 +62,6 @@ body .navbar {
 		background-color: red;
 	}
 	
-	html {
-	  normal normal 2px Arial, Tahoma, Helvetica, FreeSans, sans-serif
-	}
-
 	.Header h1 {
 		font-size: 4rem;
 	}
