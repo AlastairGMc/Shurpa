@@ -24,12 +24,12 @@ body .navbar {
 */
 
 
-html {
-  normal normal 6px Arial, Tahoma, Helvetica, FreeSans, sans-serif
-}
-
 @media only screen and (orientation: portrait) {
 
+	html {
+	  normal normal 6px Arial, Tahoma, Helvetica, FreeSans, sans-serif
+	}
+	
 	.q1 {
 		background-color: pink;
 	}
