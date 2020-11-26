@@ -23,6 +23,10 @@ body .navbar {
 	font-size: 2rem;
 }
 
+.q1 {
+	background-color: red;
+}
+
 
 
 @media only screen and (orientation: portrait) {
@@ -41,10 +45,11 @@ body .navbar {
 	}
 	
 
-
+/*
 @media only screen and (orientation: landscape) {
 
 	.q1 {
 		background-color: red;
 	}
 }
+*/
