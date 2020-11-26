@@ -29,7 +29,16 @@ body .navbar {
 }
 
 .Header h1 {
-	font-size: 1rem;
+	font-size: 4rem;
+}
+.Header .description {
+	font-size: 3rem;
+}
+.backgroundPages {
+	font-size: 2rem;
+}
+.aboutPages {
+	font-size: 2rem;
 }
 
 
@@ -45,8 +54,11 @@ body .navbar {
 		padding: 0;
 	}
 
+	:root {
+	  font-size: 20px;
+	}
 	
-
+	/*
 	.Header .description {
 		font-size: 3rem;
 	}
@@ -56,7 +68,7 @@ body .navbar {
 	.aboutPages {
 		font-size: 2rem;
 	}
-	
+	*/
 }
 
 @media only screen and (orientation: landscape) {
@@ -66,9 +78,10 @@ body .navbar {
 	}
 
 	:root {
-	  font-size: 60px;
+	  font-size: 12px;
 	}
 
+	/*
 	.Header .description {
 		font-size: 3rem;
 	}
@@ -78,5 +91,5 @@ body .navbar {
 	.aboutPages {
 		font-size: 2rem;
 	}
-
+	*/
 }
