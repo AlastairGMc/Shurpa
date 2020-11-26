@@ -24,9 +24,6 @@ body .navbar {
 */
 
 
-body {
-  	normal normal 20px Arial, Tahoma, Helvetica, FreeSans, sans-serif
-}
 
 
 
@@ -41,8 +38,14 @@ body {
 		padding: 0;
 	}
 
+	
+	:root {
+	  --base-font-size: 6px;
+	}
+
+	
 	.Header h1 {
-		font-size: 4rem;
+		font-size: var(--base-font-size) * 4;
 	}
 	.Header .description {
 		font-size: 3rem;
