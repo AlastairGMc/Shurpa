@@ -2,6 +2,32 @@
 	font-size: 6px;
 }
 
+/* hide the right column, show gadgets in the footer */
+
+.main-inner .columns {
+	padding-right: 0px;
+}
+
+.main-inner .fauxcolumn-center-outer {
+	right: 0px;
+}
+
+.main-inner .fauxcolumn-right-outer {
+	width: 0px;
+}
+
+.column-right-outer {
+	display: none;
+}
+
+.widget-content-HTML1 {
+	display: block;
+}
+
+.widget-content-HTML2 {
+	display: block;
+}
+
 
 @media only screen and (orientation: portrait) {
 
@@ -22,30 +48,6 @@
         	max-width: 100%;
         	_width: 100%;
       	}
-         
-	.main-inner .columns {
-		padding-right: 0px;
-	}
-
-	.main-inner .fauxcolumn-center-outer {
-		right: 0px;
-	}
-
-	.main-inner .fauxcolumn-right-outer {
-		width: 0px;
-	}
-      
-	.column-right-outer {
-		display: none;
-	}
-      
-	.widget-content-HTML1 {
-		display: block;
-	}
-      
-	.widget-content-HTML2 {
-		display: block;
-	}
 }
 
 @media only screen and (orientation: landscape) {
@@ -63,27 +65,4 @@
 		max-width: 70vw;
 		_width: 70vw;
 	}
-
-	.main-inner .columns {
-		padding-right: 0px;
-	}
-
-	.main-inner .fauxcolumn-center-outer {
-		right: 0px;
-	}
-
-	.main-inner .fauxcolumn-right-outer {
-		width: 0px;
-	}
-      
-	.column-right-outer {
-		display: none;
-	}
-      
-	.widget-content-HTML1 {
-		display: block;
-	}
-      
-	.widget-content-HTML2 {
-		display: block;
-	}}
+}
