@@ -28,6 +28,10 @@ body .navbar {
 }
 */
 
+:root {
+	font-size: 6px;
+}
+
 
 @media only screen and (orientation: portrait) {
 
