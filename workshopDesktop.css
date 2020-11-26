@@ -24,10 +24,13 @@ body .navbar {
 */
 
 
-	:root {
-	  --base-font-size: 6px;
-	}
+:root {
+  --base-font-size: 6px;
+}
 
+.Header h1 {
+	font-size: var(--base-font-size);
+}
 
 
 
@@ -44,9 +47,6 @@ body .navbar {
 
 	
 
-	.Header h1 {
-		font-size: 4rem
-	}
 	.Header .description {
 		font-size: 3rem;
 	}
@@ -65,9 +65,6 @@ body .navbar {
 		background-color: red;
 	}
 	
-	.Header h1 {
-		font-size:calc(var(--base-font-size) * 4);
-	}
 	.Header .description {
 		font-size: 3rem;
 	}
