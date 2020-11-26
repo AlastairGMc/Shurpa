@@ -29,7 +29,7 @@ body .navbar {
 }
 
 .Header h1 {
-	font-size: var(--base-font-size);
+	font-size: calc(var(--base-font-size) * 4);
 }
 
 
