@@ -25,11 +25,11 @@ body .navbar {
 
 
 :root {
-  --base-font-size: 6px;
+  --base-font-size: 60px;
 }
 
 .Header h1 {
-	font-size: calc(var(--base-font-size) * 10);
+	font-size: var(--base-font-size);
 }
 
 
