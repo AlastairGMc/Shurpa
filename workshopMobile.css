@@ -64,15 +64,26 @@
 		_width: 70vw;
 	}
 
-	.column-right-outer {
-		display: block;
+	.main-inner .columns {
+		padding-right: 0px;
 	}
 
-	.widget-content-HTML1 {
+	.main-inner .fauxcolumn-center-outer {
+		right: 0px;
+	}
+
+	.main-inner .fauxcolumn-right-outer {
+		width: 0px;
+	}
+      
+	.column-right-outer {
 		display: none;
 	}
       
-	.widget-content-HTML2 {
-		display: none;
+	.widget-content-HTML1 {
+		display: block;
 	}
-}
+      
+	.widget-content-HTML2 {
+		display: block;
+	}}
