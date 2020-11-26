@@ -64,7 +64,11 @@ body .navbar {
 	.q1 {
 		background-color: red;
 	}
-	
+
+	:root {
+	  font-size: 60px;
+	}
+
 	.Header .description {
 		font-size: 3rem;
 	}
