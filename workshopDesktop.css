@@ -3,26 +3,6 @@ body .navbar {
 	height: 0;
 }	
 
-/*
-.header-inner .Header .descriptionwrapper {
-	margin-bottom: 5px;
-}
-.Header h1 {
-	font-size: 60px;
-}
-.Header .description {
-	font-size: 20px;	/* 12px * 160% */
-	color: #777777;
-}
-.backgroundPages {
-	font-size: 20px;	/* 12px * 160% */
-	color: #777777;
-}
-.aboutPages {
-	font-size: 20px;	/* 13.3333px * 144% */
-}
-*/
-
 
 :root {
   font-size: 6px;
@@ -33,9 +13,11 @@ body .navbar {
 }
 .Header .description {
 	font-size: 3rem;
+	color: #777777;
 }
 .backgroundPages {
 	font-size: 2rem;
+	color: #777777;
 }
 .aboutPages {
 	font-size: 2rem;
@@ -55,21 +37,10 @@ body .navbar {
 	}
 
 	:root {
-	  font-size: 20px;
+	  font-size: 12px;
 	}
 	
-	/*
-	.Header .description {
-		font-size: 3rem;
-	}
-	.backgroundPages {
-		font-size: 2rem;
-	}
-	.aboutPages {
-		font-size: 2rem;
-	}
-	*/
-}
+
 
 @media only screen and (orientation: landscape) {
 
@@ -78,18 +49,7 @@ body .navbar {
 	}
 
 	:root {
-	  font-size: 12px;
+	  font-size: 6px;
 	}
 
-	/*
-	.Header .description {
-		font-size: 3rem;
-	}
-	.backgroundPages {
-		font-size: 2rem;
-	}
-	.aboutPages {
-		font-size: 2rem;
-	}
-	*/
 }
