@@ -5,7 +5,8 @@
 }
 #contentsWidget {
 	font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-	font-size: 18px; 
+	/* font-size: 18px; */ 
+	font-size: 2rem;
 	font-weight: normal; 
 	/* line-height: 27px; */
 	line-height: 4rem;
@@ -38,6 +39,7 @@
 	margin-left: 20px;
 }
 .SectionSummary {
+	line-height: 3rem;
 	margin-left: 50px;
 	margin-bottom: 10px;
 }
@@ -63,6 +65,7 @@
 	margin-left: 2rem;
 }
 .ChapterSummary {
+	line-height: 3rem;
 	margin-left: 50px;
 	margin-bottom: 10px;
 }
@@ -96,8 +99,7 @@
 }
 .SceneContainer {
 	font-family: lyontext-regular, georgia; 
-	font-size: 2rem; 
-	line-height: 2.4rem;
+	line-height: 3rem;
 	margin-left: 30px;
 	margin-bottom: 10px;
 	clear: both;
