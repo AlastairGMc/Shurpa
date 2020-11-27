@@ -58,12 +58,12 @@
 	}
      
 	:root {
-		font-size: calc(6px * 3);
+		font-size: calc(6px * 2);
 	}
 
 	.content-outer, .content-fauxcolumn-outer, .region-inner {
-		min-width: 70vw;	/* 70% of viewport width */
-		max-width: 70vw;
-		_width: 70vw;
+		min-width: 75vw;	/* 75% of viewport width */
+		max-width: 75vw;
+		_width: 75vw;
 	}
 }
