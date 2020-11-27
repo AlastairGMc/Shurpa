@@ -9,6 +9,13 @@
 	_width: 70vw;
 }
 
+.widget-content-HTML1 {	/* footer links widget */
+	display: none;
+}
+
+.widget-content-HTML2 {	/* footer subscribe widget */
+	display:none;
+}
 
 @media only screen and (orientation: portrait) {
 
