@@ -17,6 +17,10 @@
 	display:none;
 }
 
+.Header h1 {
+  	font-size: 5rem;
+}
+
 @media only screen and (orientation: portrait) {
 
 	.q1 {
