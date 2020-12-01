@@ -30,7 +30,7 @@
 }
 
 .SceneUpdatedDate {
-	display: none;
+	visibility: hidden;
 }
 
 
