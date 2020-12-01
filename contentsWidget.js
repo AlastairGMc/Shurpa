@@ -3,7 +3,11 @@
 var uniqueId = 0;
 const chevronUp = "https://alastairgmc.github.io/Shurpa/chevron-up.png";
 const chevronDown = "https://alastairgmc.github.io/Shurpa/chevron-down.png";
-let summaryBtnIcon =  [chevronUp, chevronDown]; // idx 0 means the container is hidden; idx 1 means the container is visible
+let summaryBtnImages =  [chevronDown, chevronUp]; // idx 0 means the container is hidden; idx 1 means the container is visible
+
+const triangleRight = "https://alastairgmc.github.io/Shurpa/triangle-right.png";
+const triangleDown = "https://alastairgmc.github.io/Shurpa/triangle-down.png";
+let containerBtnImages =  [triangleRight, triangleDown]; // idx 0 means the container is hidden; idx 1 means the container is visible
 
 function getUniqueId(){
 	return uniqueId++;
@@ -74,7 +78,8 @@ function formatContents(widgetDivName){
 	}
         return bReturn;
 }
-		
+	
+	
 function addUnit(parent, type, title, updatedDate, numComments, summary, snippet, url){
 	var template = document.getElementById("template");
 	var unit = template.cloneNode(true);
@@ -82,20 +87,29 @@ function addUnit(parent, type, title, updatedDate, numComments, summary, snippet
 	unit.removeAttribute('id');
 	parent.appendChild(unit);
 
+
 	var containerDiv = unit.getElementsByClassName('Container')[0];
+	containerDiv.showHide = showHide; 
+	containerDiv.id = getUniqueId();
+	containerDiv.className = type + containerDiv.className
 
 	var titleDiv = unit.getElementsByClassName('Title')[0];
 	titleDiv.className = type + titleDiv.className;
 
-	var btnTargetId = getUniqueId();
 
-	var titleBtn = unit.getElementsByClassName("ContainerBtn")[0];
+	var containerBtn = unit.getElementsByClassName("ContainerBtn")[0];
+	containerBtn.id = getUniqueId();
+	containerBtn.setAttribute('btnTargetId', containerDiv.id);
+	containerBtn.className = type + containerBtn.className;
+	containerBtn.imageArray = containerBtnImages;
+	containerBtn.src = containerBtnImages[0];
+
+
+	var titleBtn = unit.getElementsByClassName("ContainerTitle")[0];
 	titleBtn.innerHTML = title;
-	titleBtn.setAttribute('btnTargetId', btnTargetId);
+	titleBtn.setAttribute('btnTargetId', containerBtn.id);
 	titleBtn.className = type + titleBtn.className;
 
-	containerDiv.id = btnTargetId;
-	containerDiv.className = type + containerDiv.className
 
 	if (snippet){
 		containerDiv.innerHTML = snippet;
@@ -109,16 +123,20 @@ function addUnit(parent, type, title, updatedDate, numComments, summary, snippet
 		postLink.text = 'read more'
 		containerDiv.appendChild(postLink);
 	}
-			
+	
+		
 	var summaryBtn = unit.getElementsByClassName('SummaryBtn')[0];
 	var summaryDiv = unit.getElementsByClassName('Summary')[0];
 	if (summary){
-		var btnTargetId = getUniqueId();
-		summaryBtn.className = type + summaryBtn.className;
-		summaryBtn.setAttribute('btnTargetId', btnTargetId);
-		summaryDiv.id = btnTargetId;
+		summaryDiv.id = getUniqueId();
 		summaryDiv.className = type + summaryDiv.className;
 		summaryDiv.innerHTML = summary;
+		summaryDiv.showHide = showHide;
+
+		summaryBtn.className = type + summaryBtn.className;
+		summaryBtn.setAttribute('btnTargetId', summaryDiv.id);
+		summaryBtn.imageArray = summaryBtnImages;
+		summaryBtn.src = summaryBtnImages[0];
 	} else {
 		summaryBtn.remove();
 		summaryDiv.remove();
@@ -145,13 +163,24 @@ function addUnit(parent, type, title, updatedDate, numComments, summary, snippet
 	return containerDiv;
 }
 
+function showHide(btn){
+	var bVisible = (this.style.display == 'none' ? false : true);
+	this.style.display = (bVisible ? 'none' : 'block');
+
+	var imageArray = btn.imageArray;
+	if (imageArray) {
+		btn.src = imageArray[+(!bVisible)];
+	}
+}
+
 function btnClick(btn){
 	var targetId = btn.getAttribute('btnTargetId');
 	var target = document.getElementById(targetId);
-	var bVisible = (target.style.display == 'none' ? false : true);
-	target.style.display = (bVisible ? 'none' : 'block');
 
-	if (btn.tagName == 'IMG'){
-		btn.src = summaryBtnIcon[+bVisible];	
-	} 
+	if (target.tagName == 'DIV') {
+		target.showHide(btn);
+	} else {
+		target.click();
+	}
 }
+
