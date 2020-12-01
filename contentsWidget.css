@@ -22,12 +22,14 @@
 	margin-bottom: 10px;
 }
 .SectionContainerBtn {
+	float: left;
 	cursor: pointer;
 	height: 1rem;
-	margin-right: 20px;
-	margin-bottom: 10px;
+	margin-right: 1rem;
+	margin-top: 1rem;
 }
 .SectionContainerTitle {
+	float: left;
 	cursor: pointer;
 	color: #3399bb;
 	font-size: 3rem;
@@ -49,12 +51,14 @@
 	margin-bottom: 10px;
 }
 .ChapterContainerBtn {
+	float: left;
 	cursor: pointer;
 	height: 1rem;
-	margin-right: 20px;
-	margin-bottom: 10px;
+	margin-right: 1rem;
+	margin-top: 1rem;
 }
 .ChapterContainerTitle {
+	float: left;
 	cursor: pointer;
 	font-size: 3rem;
 }
@@ -81,20 +85,22 @@
 	overflow:hidden;
 }
 .SceneContainerBtn {
-	height: 1rem;
-	visibility: hidden;
+	display: none;
 }
 .SceneContainerTitle {
+	float: left;
 	cursor: pointer;
 	padding-left: 0px;
-	width: 40rem; 
+	width: 50%; 
 	white-space: nowrap;
 }
 .SceneUpdatedDate {
+	float: left;
 	padding-right: 3rem;
 	white-space: nowrap;
 }
 .SceneNumComments {
+	float: right;
 	white-space: nowrap;
 }
 .SceneContainer {
