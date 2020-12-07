@@ -22,7 +22,8 @@ function getScene(id)
 function getTitle(id)
 {
 	var scn = getScene(id);
-	return scn.link + '; Scene' + scn.number + ': ' + scn.title;
+	var ret = 'Chapter: ' + scn.link + ', Scene ' + scn.number + '<br>' + scn.title;
+	return ret;
 }
 
 
