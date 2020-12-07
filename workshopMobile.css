@@ -2,8 +2,11 @@
 	font-size: 6px;
 }
 
-/* hide the right column, show gadgets in the footer */
+#template {
+	display: none;
+}
 
+/* hide the right column, show gadgets in the footer */
 .main-inner .columns {
 	padding-right: 0px;
 }
