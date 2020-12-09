@@ -58,7 +58,12 @@
 	
 	.btnDonate {
 		height: 5rem;	
-	}	
+	}
+	
+        .aboutPages {
+          width: 60rem;
+      	}
+	
 }
 
 @media only screen and (orientation: landscape) {
