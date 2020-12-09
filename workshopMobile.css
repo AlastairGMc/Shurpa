@@ -23,7 +23,6 @@
 	display: none;
 }
 
-
 .widget-content-HTML1 {	/* footer links widget */
 	display: block;
 }
@@ -36,9 +35,6 @@
 	display:none;
 }
 
-.btnDonate {
-	width: 100%;	
-}
 
 @media only screen and (orientation: portrait) {
 
