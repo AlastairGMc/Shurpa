@@ -36,6 +36,9 @@
 	display:none;
 }
 
+.btnDonate {
+	width: 100%;	
+}
 
 @media only screen and (orientation: portrait) {
 
