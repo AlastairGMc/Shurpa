@@ -56,12 +56,12 @@
         	_width: 100%;
       	}
 	
-	.btnDonate {
-		height: 5rem;	
+	#btnDonate {
+		height: 4rem;	
 	}
 	
         .aboutPages {
-          width: 60%;
+          	width: 60%;
       	}
 	
 }
@@ -81,8 +81,4 @@
 		max-width: 75vw;
 		_width: 75vw;
 	}
-	
-	.btnDonate {
-		width: 100%;	
-	}	
 }
