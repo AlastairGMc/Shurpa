@@ -64,10 +64,11 @@
      		width: 70%;      
      	}
 	
+	/*
         .aboutPages {
           	width: 60%;
       	}
-	
+	*/
 }
 
 @media only screen and (orientation: landscape) {
