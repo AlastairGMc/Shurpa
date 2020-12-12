@@ -61,7 +61,7 @@
 	} */
 	
      	#titleCell {
-     		width: 60%;      
+     		width: 70%;      
      	}
 	
         .aboutPages {
@@ -85,4 +85,8 @@
 		max-width: 75vw;
 		_width: 75vw;
 	}
+	
+     	#titleCell {
+     		width: 80%;      
+     	}
 }
