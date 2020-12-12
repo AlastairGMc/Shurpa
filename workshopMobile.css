@@ -55,20 +55,10 @@
         	max-width: 100%;
         	_width: 100%;
       	}
-	
-	/* #btnDonate {
-          	width: 200%;
-	} */
-	
+		
      	#titleCell {
      		width: 70%;      
-     	}
-	
-	/*
-        .aboutPages {
-          	width: 60%;
-      	}
-	*/
+     	}	
 }
 
 @media only screen and (orientation: landscape) {
