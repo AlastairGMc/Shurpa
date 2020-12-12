@@ -53,6 +53,10 @@
 	  font-size: calc(6px * 1.5);
 	}
 	
+	#titleLogo {
+		width: 20px;
+	}
+	
      	#titleCell {
      		width: 85%;      
      	}
