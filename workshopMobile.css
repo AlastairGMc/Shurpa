@@ -60,6 +60,10 @@
           	width: 200%;
 	} */
 	
+     	#titleCell {
+     		width: 60%;      
+     	}
+	
         .aboutPages {
           	width: 60%;
       	}
