@@ -56,8 +56,12 @@
         	_width: 100%;
       	}
 		
+	#titleLogo {
+		width: 7rem;
+	}
+	
      	#titleCell {
-     		width: 70%;      
+     		width: 60%;      
      	}	
 }
 
@@ -75,6 +79,10 @@
 		min-width: 75vw;	/* 75% of viewport width */
 		max-width: 75vw;
 		_width: 75vw;
+	}
+	
+	#titleLogo {
+		display: none;
 	}
 	
      	#titleCell {
