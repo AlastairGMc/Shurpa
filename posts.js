@@ -96,7 +96,10 @@ function getNumComments(entry)
 		if (entry.link[i].rel == 'replies' && entry.link[i].type == 'text/html')
 		{
 			numComments = entry.link[i].title;
+			var num = numComments.substring(0, 2);
+			if (num > 0) {
 			break;
+			}
 		}
 	}
 	return numComments;
