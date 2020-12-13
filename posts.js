@@ -89,20 +89,21 @@ function getPostURL(entry)
 
 function getNumComments(entry)
 {
-	var numComments;
+	var returnStr = ' ';
 
 	for (var i = 0; i < entry.link.length; i++)
 	{
 		if (entry.link[i].rel == 'replies' && entry.link[i].type == 'text/html')
 		{
-			numComments = entry.link[i].title;
+			var numComments = entry.link[i].title;
 			var num = numComments.substring(0, 2);
 			if (num > 0) {
+				returnStr = numComments;
 				break;
 			}
 		}
 	}
-	return numComments;
+	return returnStr;
 }
 
 
