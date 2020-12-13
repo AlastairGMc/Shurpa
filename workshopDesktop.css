@@ -54,11 +54,12 @@
 	}
 	
 	#titleLogo {
-		height: 5rem;
+		display: none;
 	}
-	/*
+	
+	
      	#titleCell {
      		width: 85%;      
-     	} */
+     	} 
 }
 
