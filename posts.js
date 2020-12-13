@@ -98,7 +98,7 @@ function getNumComments(entry)
 			numComments = entry.link[i].title;
 			var num = numComments.substring(0, 2);
 			if (num > 0) {
-			break;
+				break;
 			}
 		}
 	}
