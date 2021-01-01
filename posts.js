@@ -147,8 +147,8 @@ function getPostData(root)
 		var url = getPostURL(root.feed.entry[i]);
 		var published = root.feed.entry[i].published.$t;
 		var updated = getFormattedDate(root.feed.entry[i].updated.$t);
-		//var body = root.feed.entry[i].content.$t;
-		var body = root.feed.entry[i].summary.$t;
+		var body = root.feed.entry[i].content.$t;
+		//var body = root.feed.entry[i].summary.$t;
 		//var preview = getPreview(body);
 		var descrip = null;	//getSceneDescrip(body);
 		var comments = getNumComments(root.feed.entry[i]);
@@ -159,7 +159,8 @@ function getPostData(root)
 			number:number, 
 			title:title, 
 			descrip:descrip,
-			body:body,
+			//body:body,
+			body:body.substring(0, 200),
 			url:url, 
 			published:published, 
 			updated:updated,
