@@ -46,6 +46,10 @@
 		font-size: calc(6px * 3);
 	}
 
+	.tblPronouns {
+		font-size: 12px;	
+	}
+
 	body {
 		padding: 0;
 	}
@@ -73,6 +77,10 @@
      
 	:root {
 		font-size: calc(6px * 2);
+	}
+	
+	.tblPronouns {
+		font-size: 15px;	
 	}
 
 	.content-outer, .content-fauxcolumn-outer, .region-inner {
