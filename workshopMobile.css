@@ -46,7 +46,7 @@
 		font-size: calc(6px * 3);
 	}
 
-	.tblPronouns {
+	table {
 		font-size: 10px;	
 	}
 
@@ -79,7 +79,7 @@
 		font-size: calc(6px * 2);
 	}
 	
-	.tblPronouns {
+	table {
 		font-size: 12px;	
 	}
 
