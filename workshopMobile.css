@@ -61,7 +61,7 @@
       	}
 		
 	#titleLogo {
-		display: block;
+		visibility: visible;
 		width: 9rem;
 	}
 	
