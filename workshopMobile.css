@@ -61,7 +61,9 @@
       	}
 		
 	#titleLogo {
-		visibility: visible;
+		/* visibility: visible;		
+		background-image: url('https://1.bp.blogspot.com/-FTORDf8Eea4/X9UU0vhcUNI/AAAAAAAAAXc/XZ8jCUCbdmgAlhI0_0QtmmIvj5ik9gdvACLcBGAsYHQ/s0/woman-head.png');
+		background-repeat: no-repeat;
 		width: 9rem;
 	}
 	
@@ -91,7 +93,7 @@
 	}
 	
 	#titleLogo {
-		display: none;
+		width: 0;
 	}
 	
      	#titleCell {
